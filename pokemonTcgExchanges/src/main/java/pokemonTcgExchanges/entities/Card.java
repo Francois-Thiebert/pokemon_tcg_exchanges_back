@@ -25,22 +25,23 @@ public class Card {
 	@Column(name = "card_id")
 	@JsonView(JsonViews.Simple.class)
 	private Long id;
-	@Column(name = "name", nullable = false, unique = true)
+	@Column(name = "name")
 	@JsonView(JsonViews.Simple.class)
 	private String name;
-	@Column(name = "rarity", nullable = false, unique = true)
+	@Column(name = "rarity")
 	@JsonView(JsonViews.Simple.class)
 	private int rarity;
-	@Column(name = "collection", nullable = false, unique = true)
+	@Column(name = "collection")
 	@JsonView(JsonViews.Simple.class)
 	private int collection;
-	@Column(name = "serial_number", nullable = false, unique = true)
+	@Column(name = "serial_number")
 	@JsonView(JsonViews.Simple.class)
 	private String serialNumber;
-	@Column(name = "type", nullable = false)
+	@Column(name = "type")
 	@Enumerated(EnumType.ORDINAL)
+	@JsonView(JsonViews.Simple.class)
 	private Type type;
-	@Column(name = "picture", nullable = false, unique = true)
+	@Column(name = "picture")
 	@JsonView(JsonViews.Simple.class)
 	private String picture;
 	@ManyToMany

@@ -11,6 +11,7 @@ import javax.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import pokemonTcgExchanges.entities.Card;
 import pokemonTcgExchanges.entities.Exchange;
 import pokemonTcgExchanges.entities.User;
 import pokemonTcgExchanges.exceptions.ExchangeException;
@@ -40,6 +41,14 @@ public class ExchangeService {
 
 	public Exchange getById(Long id) {
 		return exchangeRepo.findById(id).orElseThrow(ExchangeException::new);
+	}
+	
+	public List<Exchange> getByCard(Long id) {
+		Card card = new Card();
+		card.setId(id);
+		List<Exchange> exchanges = new ArrayList<>();
+		exchanges = exchangeRepo.findExchangesByCard(card.getId());
+		return exchanges;
 	}
 
 	public List<Exchange> getAllByUser(Long id) {

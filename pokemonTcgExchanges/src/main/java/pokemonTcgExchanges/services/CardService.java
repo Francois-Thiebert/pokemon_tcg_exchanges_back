@@ -1,5 +1,6 @@
 package pokemonTcgExchanges.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -11,8 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import pokemonTcgExchanges.entities.Card;
+import pokemonTcgExchanges.entities.Exchange;
 import pokemonTcgExchanges.exceptions.CardException;
 import pokemonTcgExchanges.repositories.CardRepository;
+import pokemonTcgExchanges.repositories.ExchangeRepository;
 
 @Service
 public class CardService {
@@ -21,6 +24,10 @@ public class CardService {
 	private Validator validator;
 	@Autowired
 	private CardRepository cardRepo;
+	@Autowired
+	private ExchangeService exchangeSrv;
+	@Autowired
+	private ExchangeRepository exchangeRepo;
 
 	public List<Card> getAll() {
 		return cardRepo.findAll();
@@ -28,6 +35,13 @@ public class CardService {
 
 	public Card getById(Long id) {
 		return cardRepo.findById(id).orElseThrow(CardException::new);
+	}
+
+	public List<Card> getByExchange(Long id) {
+		Exchange exchange = exchangeSrv.getById(id);
+		List<Card> cardExchange = new ArrayList<>();
+		cardExchange = cardRepo.findByExchange(exchange.getId());
+		return cardExchange;
 	}
 
 	public Card create(Card card) {
