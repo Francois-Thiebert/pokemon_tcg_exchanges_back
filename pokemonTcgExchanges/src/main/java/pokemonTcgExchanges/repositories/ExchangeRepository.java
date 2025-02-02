@@ -1,0 +1,33 @@
+package pokemonTcgExchanges.repositories;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import pokemonTcgExchanges.entities.Exchange;
+import pokemonTcgExchanges.entities.User;
+
+public interface ExchangeRepository extends JpaRepository<Exchange, Long> {
+
+	@Transactional
+	@Modifying
+	@Query("delete from Exchange e where e.user1.id = :userId or e.user2.id = :userId")
+	void deleteExchangeByUser(@Param("userId") Long userId);
+	
+	
+	@Query("SELECT e FROM Exchange e WHERE (e.user1.id = :idUser1 AND e.user2.id = :idUser2) OR (e.user1.id = :idUser2 AND e.user2.id = :idUser1)")
+	List<Exchange> findExchangesByUserIds(@Param("idUser1") Long idUser1, @Param("idUser2") Long idUser2);
+	
+	Exchange findByUser1AndUser2(User user1, User user2);
+	List<Exchange> findByUser1(User user);
+	List<Exchange> findByUser2(User user);
+	
+	
+
+}
