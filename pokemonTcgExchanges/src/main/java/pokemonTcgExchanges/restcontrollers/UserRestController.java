@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -75,10 +76,16 @@ public class UserRestController {
 		return usersIds;
 	}
 
+//	@GetMapping("/login/check/{login}")
+//	public boolean loginExist(@PathVariable String login) {
+//		return userSrv.loginExist(login);
+//	}
+//	
 	@GetMapping("/login/check/{login}")
-	public boolean loginExist(@PathVariable String login) {
-		return userSrv.loginExist(login);
-	}
+    public ResponseEntity<Boolean> checkLogin(@PathVariable String login) {
+        boolean exists = userSrv.checkLoginExists(login);
+        return ResponseEntity.ok(exists);
+    }
 
 	@PostMapping({ "", "/inscription" })
 	@JsonView(JsonViews.User.class)

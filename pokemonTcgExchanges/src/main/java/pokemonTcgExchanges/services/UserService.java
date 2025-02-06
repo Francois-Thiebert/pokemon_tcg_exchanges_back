@@ -84,6 +84,10 @@ public class UserService {
 
 		return userIds;
 	}
+	
+	public boolean checkLoginExists(String login) {
+        return userRepo.existsByLogin(login);
+    }
 
 	public User create(User user) {
 		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();

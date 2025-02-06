@@ -46,13 +46,15 @@ public class Card {
 	private String picture;
 	@ManyToMany
 	private Set<User> wisher;
+	@ManyToMany
+	private Set<User> giver;
 
 	public Card() {
 		super();
 	}
 
 	public Card(Long id, String name, int rarity, int collection, String serialNumber, Type type, String picture,
-			Set<User> wisher) {
+			Set<User> wisher, Set<User> giver) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -62,6 +64,15 @@ public class Card {
 		this.type = type;
 		this.picture = picture;
 		this.wisher = wisher;
+		this.giver = giver;
+	}
+
+	public Set<User> getGiver() {
+		return giver;
+	}
+
+	public void setGiver(Set<User> giver) {
+		this.giver = giver;
 	}
 
 	public Set<User> getWisher() {

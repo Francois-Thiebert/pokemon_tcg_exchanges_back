@@ -66,6 +66,7 @@ public class CardService {
 			cardEnBase.setSerialNumber(card.getSerialNumber());
 			cardEnBase.setType(card.getType());
 			cardEnBase.setWisher(card.getWisher());
+			cardEnBase.setGiver(card.getGiver());
 			return cardRepo.save(cardEnBase);
 		} else {
 			throw new CardException();
