@@ -42,7 +42,7 @@ public class Exchange {
 	@JoinColumn(name = "id_user2_exchange", foreignKey = @ForeignKey(name = "id_user2_exchange_fk"))
 	@JsonView(JsonViews.Exchange.class)
 	private User user2;
-	@Column(name = "date", nullable = false)
+	@Column(name = "date", nullable = true)
 	@JsonView(JsonViews.Simple.class)
 	private LocalDate date;
 

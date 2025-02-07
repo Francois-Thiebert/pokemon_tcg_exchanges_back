@@ -51,7 +51,7 @@ public class ExchangeService {
 		return exchanges;
 	}
 
-	public List<Exchange> getAllByUser(Long id) {
+	public List<Exchange> getByUserId(Long id) {
 		User user = new User();
 		user.setId(id);
 		List<Exchange> exchanges = new ArrayList<>();

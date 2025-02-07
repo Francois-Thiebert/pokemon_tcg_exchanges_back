@@ -51,13 +51,6 @@ public class ApiSecurityConfig {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
-    
-//    @Bean
-//    public CommonsMultipartResolver multipartResolver() {
-//        CommonsMultipartResolver resolver = new CommonsMultipartResolver();
-//        resolver.setMaxUploadSizePerFile(10240000); // Taille maximale du fichier en octets (10 Mo dans cet exemple)
-//        return resolver;
-//    }
 
 
 

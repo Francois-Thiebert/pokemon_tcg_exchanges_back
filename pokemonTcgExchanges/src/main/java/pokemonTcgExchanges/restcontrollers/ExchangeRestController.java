@@ -59,6 +59,14 @@ public class ExchangeRestController {
 		exchanges = exchangeSrv.getByCard(card.getId());
 		return exchanges;
 	}
+	
+	@GetMapping("/exchange/user/{id}")
+	@JsonView(JsonViews.Simple.class)
+	public List<Exchange> getByUser(@PathVariable Long id) {
+		List<Exchange> exchanges = null;
+		exchanges=exchangeSrv.getByUserId(id);
+		return exchanges;
+	}
 
 	@PostMapping({ "", "/create" })
 	@JsonView(JsonViews.Simple.class)
