@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 
 import pokemonTcgExchanges.entities.Card;
 import pokemonTcgExchanges.entities.Exchange;
+import pokemonTcgExchanges.entities.User;
 import pokemonTcgExchanges.jsonviews.JsonViews;
 import pokemonTcgExchanges.services.CardService;
 import pokemonTcgExchanges.services.ExchangeService;
@@ -44,14 +45,14 @@ public class ExchangeRestController {
 	}
 
 	@GetMapping("/{id}")
-	@JsonView(JsonViews.Simple.class)
+	@JsonView(JsonViews.Exchange.class)
 	public Exchange getById(@PathVariable Long id) {
 		Exchange exchange = null;
 		exchange = exchangeSrv.getById(id);
 		return exchange;
 	}
 
-	@GetMapping("/exchange/{id}")
+	@GetMapping("card/{id}")
 	@JsonView(JsonViews.Simple.class)
 	public List<Exchange> getByCard(@PathVariable Long id) {
 		Card card = cardSrv.getById(id);
@@ -60,12 +61,36 @@ public class ExchangeRestController {
 		return exchanges;
 	}
 	
-	@GetMapping("/exchange/user/{id}")
+	@GetMapping("/user/{id}")
 	@JsonView(JsonViews.Simple.class)
 	public List<Exchange> getByUser(@PathVariable Long id) {
 		List<Exchange> exchanges = null;
 		exchanges=exchangeSrv.getByUserId(id);
 		return exchanges;
+	}
+	
+	@GetMapping("/new/{id}")
+	@JsonView(JsonViews.Exchange.class)
+	public List<Exchange> getNewExchanges(@PathVariable Long id) {
+		List<Exchange> exchanges = null;
+		exchanges=exchangeSrv.getNewExchanges(id);
+		return exchanges;
+	}
+	
+	@GetMapping("/new/givers/{id}")
+	@JsonView(JsonViews.Simple.class)
+	public List<User> getNewGivers(@PathVariable Long id) {
+		List<User> givers = null;
+		givers=exchangeSrv.getGivers(id);
+		return givers;
+	}
+	
+	@GetMapping("/new/wishedFind/{id}")
+	@JsonView(JsonViews.Simple.class)
+	public List<Card> getWishedCardsFind(@PathVariable Long id) {
+		List<Card> wishedFind = null;
+		wishedFind=exchangeSrv.getWishedFind(id);
+		return wishedFind;
 	}
 
 	@PostMapping({ "", "/create" })

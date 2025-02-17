@@ -9,9 +9,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -51,8 +54,20 @@ public class User implements UserDetails {
 	@JsonView(JsonViews.UserWithAll.class)
 	private Set<Exchange> exchanges2;
 	@ManyToMany
+	@JoinTable(
+	    name = "user_wish_list", 
+	    joinColumns = @JoinColumn(name = "user_id"), 
+	    inverseJoinColumns = @JoinColumn(name = "wish_list_card_id")
+	)
+	@JsonView(JsonViews.UserWithAll.class)
 	private Set<Card> wishList;
 	@ManyToMany
+	@JoinTable(
+	    name = "user_give_list", 
+	    joinColumns = @JoinColumn(name = "user_id"), 
+	    inverseJoinColumns = @JoinColumn(name = "give_list_card_id")
+	)
+	@JsonView(JsonViews.UserWithAll.class)
 	private Set<Card> toGiveList;
 
 	public User() {

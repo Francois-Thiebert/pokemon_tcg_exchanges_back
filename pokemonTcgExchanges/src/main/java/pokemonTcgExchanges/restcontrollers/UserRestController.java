@@ -41,7 +41,7 @@ public class UserRestController {
 	}
 
 	@GetMapping("/{id}")
-	@JsonView(JsonViews.User.class)
+	@JsonView(JsonViews.UserWithAll.class)
 	public User getById(@PathVariable Long id) {
 		User user = null;
 		user = userSrv.getById(id);
@@ -54,6 +54,14 @@ public class UserRestController {
 		User user = null;
 		user = userSrv.getById(id);
 		return user;
+	}
+	
+	@GetMapping("/giverCard/{id}")
+	@JsonView(JsonViews.UserWithAll.class)
+	public List<User> getUserByGiveCard(@PathVariable Long Cardid) {
+		List<User> users = null;
+		users = userSrv.getByGiver(Cardid);
+		return users;
 	}
 
 	// Retourne la liste des users impliqués en echange avec le user en paramètre

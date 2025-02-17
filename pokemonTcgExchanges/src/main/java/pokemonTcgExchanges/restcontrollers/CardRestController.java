@@ -1,6 +1,7 @@
 package pokemonTcgExchanges.restcontrollers;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.validation.Valid;
 
@@ -23,6 +24,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 
 import pokemonTcgExchanges.entities.Card;
 import pokemonTcgExchanges.entities.Exchange;
+import pokemonTcgExchanges.entities.User;
 import pokemonTcgExchanges.jsonviews.JsonViews;
 import pokemonTcgExchanges.services.CardService;
 import pokemonTcgExchanges.services.ExchangeService;
@@ -42,6 +44,12 @@ public class CardRestController {
 	public List<Card> getAll() {
 		return cardSrv.getAll();
 	}
+	
+	@GetMapping("/collection/{collection}")
+	@JsonView(JsonViews.Simple.class)
+	public List<Card> getByCollection(@PathVariable Integer collection) {
+		return cardSrv.getByCollection(collection);
+	}
 
 	@GetMapping("/{id}")
 	@JsonView(JsonViews.Simple.class)
@@ -50,6 +58,40 @@ public class CardRestController {
 		card = cardSrv.getById(id);
 		return card;
 	}
+	
+	@GetMapping("/gived/{id}")
+	@JsonView(JsonViews.Card.class)
+	public Card getGivedCard(@PathVariable Long id) {
+		Card givedcard = null;
+		givedcard = cardSrv.getByGivedCard(id);
+		return givedcard;
+	}
+	
+	@GetMapping("/giver/{id}")
+	@JsonView(JsonViews.Card.class)
+	public Long getGiverByCard(@PathVariable Long id) {
+	    Long giverId = cardSrv.getGiverByCard(id);
+	    return giverId;
+	}
+	
+	@GetMapping("/givers/{id}")
+	@JsonView(JsonViews.Card.class)
+	public List<Long> getGiversByCard(@PathVariable Long id) {
+		List<Long> giversIds = cardSrv.getGiversIdsByCard(id);
+	    return giversIds;
+	}
+	
+//	@GetMapping("/giver/{id}")
+//	@JsonView(JsonViews.Card.class)
+//	public Long getFirstGiverId(@PathVariable Long id) {
+//	    Card givedcard = cardSrv.getByGivedCard(id);
+//	    if (givedcard != null && !givedcard.getGiver().isEmpty()) {
+//	        return givedcard.getGiver().iterator().next().getId();
+//	    } else {
+//	        return null;
+//	    }
+//	}
+
 
 	@GetMapping("/exchange/{id}")
 	@JsonView(JsonViews.Simple.class)
@@ -57,6 +99,22 @@ public class CardRestController {
 		Exchange exchange = exchangeSrv.getById(id);
 		List<Card> cards = null;
 		cards = cardSrv.getByExchange(exchange.getId());
+		return cards;
+	}
+	
+	@GetMapping("/wished/user/{Userid}/rarity/{rarity}")
+	@JsonView(JsonViews.Card.class)
+	public List<Card> getByxWishedByRarity(@PathVariable Long Userid, Integer rarity) {
+		List<Card> cards = null;
+		cards = cardSrv.getWishedByRarityUser(Userid, rarity);
+		return cards;
+	}
+	
+	@GetMapping("/topwished/user/{Userid}")
+	@JsonView(JsonViews.Simple.class)
+	public List<Card> getTopWishedByUser(@PathVariable Long Userid) {
+		List<Card> cards = null;
+		cards = cardSrv.getWishedEachRarityUser(Userid);
 		return cards;
 	}
 

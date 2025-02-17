@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import pokemonTcgExchanges.entities.Card;
 import pokemonTcgExchanges.entities.Exchange;
 import pokemonTcgExchanges.entities.Role;
 import pokemonTcgExchanges.entities.User;
@@ -40,6 +41,11 @@ public class UserService {
 
 	public User getById(Long id) {
 		return userRepo.findById(id).orElseThrow(UserException::new);
+	}
+	
+	public List<User> getByGiver(Long CardId) {
+		List<User> users = userRepo.findGiverByCard(CardId);
+		return users;
 	}
 
 	// Retourne la liste des users impliqués en echange avec le user en paramètre

@@ -7,9 +7,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
@@ -30,7 +33,7 @@ public class Card {
 	private String name;
 	@Column(name = "rarity")
 	@JsonView(JsonViews.Simple.class)
-	private int rarity;
+	private Integer rarity;
 	@Column(name = "collection")
 	@JsonView(JsonViews.Simple.class)
 	private int collection;
@@ -42,18 +45,20 @@ public class Card {
 	@JsonView(JsonViews.Simple.class)
 	private Type type;
 	@Column(name = "picture")
-	@JsonView(JsonViews.Simple.class)
+	@JsonView(JsonViews.Card.class)
 	private String picture;
-	@ManyToMany
+	@ManyToMany(mappedBy = "wishList")
+	@JsonView(JsonViews.Card.class)
 	private Set<User> wisher;
-	@ManyToMany
+	@ManyToMany(mappedBy = "toGiveList")
+	@JsonView(JsonViews.Card.class)
 	private Set<User> giver;
 
 	public Card() {
 		super();
 	}
 
-	public Card(Long id, String name, int rarity, int collection, String serialNumber, Type type, String picture,
+	public Card(Long id, String name, Integer rarity, int collection, String serialNumber, Type type, String picture,
 			Set<User> wisher, Set<User> giver) {
 		super();
 		this.id = id;
@@ -103,11 +108,11 @@ public class Card {
 		return rarity;
 	}
 
-	public void setRarity(int rarity) {
+	public void setRarity(Integer rarity) {
 		this.rarity = rarity;
 	}
 
-	public int getCollection() {
+	public Integer getCollection() {
 		return collection;
 	}
 

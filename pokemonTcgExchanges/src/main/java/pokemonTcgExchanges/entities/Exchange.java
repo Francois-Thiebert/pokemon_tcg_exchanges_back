@@ -1,10 +1,13 @@
 package pokemonTcgExchanges.entities;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -44,13 +47,17 @@ public class Exchange {
 	private User user2;
 	@Column(name = "date", nullable = true)
 	@JsonView(JsonViews.Simple.class)
-	private LocalDate date;
+	private LocalDateTime date;
+	@Column(name = "state")
+	@Enumerated(EnumType.ORDINAL)
+	@JsonView(JsonViews.Simple.class)
+	private State state;
 
 	public Exchange() {
 		super();
 	}
 
-	public Exchange(Long id, Card card1, Card card2, User user1, User user2, LocalDate date) {
+	public Exchange(Long id, Card card1, Card card2, User user1, User user2, LocalDateTime date, State state) {
 		super();
 		this.id = id;
 		this.card1 = card1;
@@ -58,7 +65,10 @@ public class Exchange {
 		this.user1 = user1;
 		this.user2 = user2;
 		this.date = date;
+		this.state = state;
 	}
+
+
 
 	public Long getId() {
 		return id;
@@ -100,12 +110,20 @@ public class Exchange {
 		this.user2 = user2;
 	}
 
-	public LocalDate getDate() {
+	public LocalDateTime getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDate date) {
+	public void setDate(LocalDateTime date) {
 		this.date = date;
+	}
+
+	public State getState() {
+		return state;
+	}
+
+	public void setState(State state) {
+		this.state = state;
 	}
 
 	@Override
