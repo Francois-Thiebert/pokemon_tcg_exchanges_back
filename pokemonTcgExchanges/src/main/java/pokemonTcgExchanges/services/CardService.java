@@ -33,6 +33,17 @@ public class CardService {
 	public List<Card> getAll() {
 		return cardRepo.findAll();
 	}
+	
+	public List<Card> getAllByCollections(List<Integer> collections) {
+	    return cardRepo.findAllCardExchangable(collections);
+	}
+	
+	public List<Card> getAllExchangabale() {
+		List<Integer> collections = new ArrayList<>();
+		collections.add(0);
+		collections.add(1);
+	    return getAllByCollections(collections);
+	}
 
 	public Card getById(Long id) {
 		return cardRepo.findById(id).orElseThrow(CardException::new);

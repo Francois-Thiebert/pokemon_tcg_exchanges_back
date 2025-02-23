@@ -41,6 +41,12 @@ public class CardRestController {
 
 	@GetMapping("")
 	@JsonView(JsonViews.Simple.class)
+	public List<Card> getAllExchangable() {
+		return cardSrv.getAllExchangabale();
+	}
+	
+	@GetMapping("/all")
+	@JsonView(JsonViews.Simple.class)
 	public List<Card> getAll() {
 		return cardSrv.getAll();
 	}
