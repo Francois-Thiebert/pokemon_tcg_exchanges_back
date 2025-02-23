@@ -124,6 +124,7 @@ public class ExchangeService {
 			exchangeEnBase.setCard1(exchange.getCard1());
 			exchangeEnBase.setCard2(exchange.getCard2());
 			exchangeEnBase.setDate(exchange.getDate());
+			exchangeEnBase.setState(exchange.getState());
 			return exchangeRepo.save(exchangeEnBase);
 		} else {
 			throw new ExchangeException();

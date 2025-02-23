@@ -123,6 +123,9 @@ public class ExchangeRestController {
 		if (exchange.getUser2() != null) {
 			exchangeEnBase.setUser2(exchange.getUser2());
 		}
+		if (exchange.getState() != null) {
+			exchangeEnBase.setState(exchange.getState());
+		}
 		exchangeSrv.update(exchangeEnBase);
 		return exchangeEnBase;
 	}

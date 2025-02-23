@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -26,12 +27,14 @@ public class ApiSecurityConfig {
                 .cors() // Activer la configuration CORS
                 .and()
                 .authorizeRequests()
-//                    .antMatchers(HttpMethod.OPTIONS, "/api/**").permitAll()
-//                    .antMatchers(HttpMethod.GET, "/api/**").permitAll()
-//                    .antMatchers(HttpMethod.POST,"/api/**").anonymous()
-//                    .antMatchers(HttpMethod.GET).authenticated()
-//                    .anyRequest().hasAnyRole("ADMIN")
-                    .anyRequest().permitAll()
+                    .antMatchers(HttpMethod.OPTIONS, "/api/**").permitAll()
+                    .antMatchers(HttpMethod.GET, "/api/auth").permitAll()
+                    .antMatchers(HttpMethod.POST,"/api/user").permitAll()
+					.antMatchers(HttpMethod.GET).authenticated()
+                    .antMatchers(HttpMethod.POST, "/api/**").authenticated()
+                    .antMatchers(HttpMethod.PUT, "/api/**").authenticated()
+                    .anyRequest().hasAnyRole("ADMIN")
+//                    .anyRequest().permitAll()
                 .and()
                 .httpBasic()
                 .and()
