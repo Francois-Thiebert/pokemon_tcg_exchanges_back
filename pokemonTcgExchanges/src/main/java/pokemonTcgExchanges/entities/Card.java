@@ -44,6 +44,9 @@ public class Card {
 	@Enumerated(EnumType.ORDINAL)
 	@JsonView(JsonViews.Simple.class)
 	private Type type;
+	@Column(name = "rarity_string")
+	@JsonView(JsonViews.Simple.class)
+	private String rarity_string;
 	@Column(name = "picture")
 	@JsonView(JsonViews.Card.class)
 	private String picture;
@@ -58,8 +61,8 @@ public class Card {
 		super();
 	}
 
-	public Card(Long id, String name, Integer rarity, int collection, String serialNumber, Type type, String picture,
-			Set<User> wisher, Set<User> giver) {
+	public Card(Long id, String name, Integer rarity, int collection, String serialNumber, Type type,
+			String rarity_string, String picture, Set<User> wisher, Set<User> giver) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -67,9 +70,18 @@ public class Card {
 		this.collection = collection;
 		this.serialNumber = serialNumber;
 		this.type = type;
+		this.rarity_string = rarity_string;
 		this.picture = picture;
 		this.wisher = wisher;
 		this.giver = giver;
+	}
+
+	public String getRarity_string() {
+		return rarity_string;
+	}
+
+	public void setRarity_string(String rarity_string) {
+		this.rarity_string = rarity_string;
 	}
 
 	public Set<User> getGiver() {
