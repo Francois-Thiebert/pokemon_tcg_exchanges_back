@@ -42,6 +42,7 @@ public class CardService {
 		List<Integer> collections = new ArrayList<>();
 		collections.add(0);
 		collections.add(1);
+		collections.add(2);
 	    return getAllByCollections(collections);
 	}
 
