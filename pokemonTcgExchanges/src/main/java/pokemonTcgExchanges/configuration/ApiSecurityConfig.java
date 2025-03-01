@@ -45,7 +45,7 @@ public class ApiSecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:4200","http://176.159.136.78:9000")); // Set allowed origins
+        configuration.setAllowedOrigins(List.of("http://localhost:4200","http://176.159.136.78:9000","http://176.159.136.78:4200")); // Set allowed origins
         configuration.addAllowedMethod("*"); // Allow all HTTP methods
         configuration.addAllowedHeader("*"); // Allow all headers
         configuration.setAllowCredentials(true);
