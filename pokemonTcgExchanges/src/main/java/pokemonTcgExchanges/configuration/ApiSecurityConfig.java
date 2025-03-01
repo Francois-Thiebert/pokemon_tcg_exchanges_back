@@ -27,7 +27,7 @@ public class ApiSecurityConfig {
                 .cors() // Activer la configuration CORS
                 .and()
                 .authorizeRequests()
-//                    .antMatchers(HttpMethod.OPTIONS, "/api/**").permitAll()
+                    .antMatchers(HttpMethod.OPTIONS, "/api/**").permitAll()
 //                    .antMatchers(HttpMethod.GET, "/api/auth").permitAll()
 //                    .antMatchers(HttpMethod.POST,"/api/user").permitAll()
 //					.antMatchers(HttpMethod.GET).authenticated()
@@ -46,7 +46,7 @@ public class ApiSecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 //        configuration.setAllowedOrigins(List.of("http://localhost:4200"));
-        configuration.setAllowedOrigins(List.of("*"));
+        configuration.setAllowedOrigins(List.of("http://176.159.136.78:9000"));
         configuration.addAllowedMethod("*"); // Allow all HTTP methods
         configuration.addAllowedHeader("*"); // Allow all headers
         configuration.setAllowCredentials(true);
