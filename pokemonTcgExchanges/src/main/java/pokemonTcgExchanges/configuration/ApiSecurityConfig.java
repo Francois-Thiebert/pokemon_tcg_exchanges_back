@@ -29,6 +29,7 @@ public class ApiSecurityConfig {
                 .authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS, "/api/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/auth").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/user/login/check/*").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/user").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/user/").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/api/user").hasAnyRole("ADMIN")
