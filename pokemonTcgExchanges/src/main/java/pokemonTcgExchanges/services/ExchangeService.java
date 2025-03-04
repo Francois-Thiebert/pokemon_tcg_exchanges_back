@@ -140,276 +140,31 @@ public class ExchangeService {
 		exchangeRepo.delete(exchangeEnBase);
 	}
 	
-	public List<User> getGivers(Long userID) {
-		User user = new User();
-		user = userSrv.getById(userID);
-		Set<Card> wishedCards = user.getWishList();
-		Set<Card> toGiveCards = user.getToGiveList();
-		List<User> givers = new ArrayList<>();
-		List<Card> wishedCardsFind = new ArrayList<>();
-		List<Exchange> exchangesProposal = new ArrayList<>();
-		Boolean isThereRarity0 = false;
-		User giverRarity0 = new User();
-		Card cardWishedRarity0 = new Card();
-		Card cardGivedRarity0 = new Card();
-		Exchange exchangeRarity0 = new Exchange();
-		Boolean isThereRarity1 = false;
-		User giverRarity1 = new User();
-		Card cardWishedRarity1 = new Card();
-		Card cardGivedRarity1 = new Card();
-		Exchange exchangeRarity1 = new Exchange();
-		Boolean isThereRarity2 = false;
-		User giverRarity2 = new User();
-		Card cardWishedRarity2 = new Card();
-		Card cardGivedRarity2 = new Card();
-		Exchange exchangeRarity2 = new Exchange();
-		Boolean isThereRarity3 = false;
-		User giverRarity3 = new User();
-		Card cardWishedRarity3 = new Card();
-		Card cardGivedRarity3 = new Card();
-		Exchange exchangeRarity3 = new Exchange();
-		Boolean isThereRarity4 = false;
-		User giverRarity4 = new User();
-		Card cardWishedRarity4 = new Card();
-		Card cardGivedRarity4 = new Card();
-		Exchange exchangeRarity4 = new Exchange();
-		for (Card c : wishedCards) {
-			if (c.getRarity() == 0 && isThereRarity0 == false) {
-				List<Long> giversId = cardSrv.getGiversIdsByCard(c.getId());
-				if (!giversId.isEmpty()) {
-					for (Long g : giversId) {
-						if (g != userID) {
-							User giver = userSrv.getById(g);
-							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
-								Boolean isCompatible = false;
-								for(Card wishedGiver: wishedCardsGiver) {
-									if(wishedGiver.getRarity()==0 && !isCompatible) {
-										for(Card givedWisher: toGiveCards) {
-											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity0 = wishedGiver;
-											}
-										}
-									}
-								}
-								if(isCompatible == true && isThereRarity0 == false) {
-									giverRarity0 = giver;
-									cardWishedRarity0 = c;
-									isThereRarity0 = true;
-								}
-							}
-						}
-
-					}
-				}
-			}
-			if (c.getRarity() == 1 && isThereRarity1 == false) {
-				List<Long> giversId = cardSrv.getGiversIdsByCard(c.getId());
-				if (!giversId.isEmpty()) {
-					for (Long g : giversId) {
-						if (g != userID) {
-							User giver = userSrv.getById(g);
-							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
-								Boolean isCompatible = false;
-								for(Card wishedGiver: wishedCardsGiver) {
-									if(wishedGiver.getRarity()==1 && !isCompatible) {
-										for(Card givedWisher: toGiveCards) {
-											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity1 = wishedGiver;
-											}
-										}
-									}
-								}
-								if(isCompatible == true && isThereRarity1 == false) {
-									giverRarity1 = giver;
-									cardWishedRarity1 = c;
-									isThereRarity1 = true;
-								}
-							}
-						}
-
-					}
-				}
-			}
-			if (c.getRarity() == 2 && isThereRarity2 == false) {
-				List<Long> giversId = cardSrv.getGiversIdsByCard(c.getId());
-				if (!giversId.isEmpty()) {
-					for (Long g : giversId) {
-						if (g != userID) {
-							User giver = userSrv.getById(g);
-							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
-								Boolean isCompatible = false;
-								for(Card wishedGiver: wishedCardsGiver) {
-									if(wishedGiver.getRarity()==2 && !isCompatible) {
-										for(Card givedWisher: toGiveCards) {
-											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity2 = wishedGiver;
-											}
-										}
-									}
-								}
-								if(isCompatible == true && isThereRarity2 == false) {
-									giverRarity2 = giver;
-									cardWishedRarity2 = c;
-									isThereRarity2 = true;
-								}
-							}
-						}
-
-					}
-				}
-			}
-			if (c.getRarity() == 3 && isThereRarity3 == false) {
-				List<Long> giversId = cardSrv.getGiversIdsByCard(c.getId());
-				if (!giversId.isEmpty()) {
-					for (Long g : giversId) {
-						if (g != userID) {
-							User giver = userSrv.getById(g);
-							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
-								Boolean isCompatible = false;
-								for(Card wishedGiver: wishedCardsGiver) {
-									if(wishedGiver.getRarity()==3 && !isCompatible) {
-										for(Card givedWisher: toGiveCards) {
-											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity3 = wishedGiver;
-											}
-										}
-									}
-								}
-								if(isCompatible == true && isThereRarity3 == false) {
-									giverRarity3 = giver;
-									cardWishedRarity3 = c;
-									isThereRarity3 = true;
-								}
-							}
-						}
-
-					}
-				}
-			}
-			if (c.getRarity() == 4 && isThereRarity4 == false) {
-				List<Long> giversId = cardSrv.getGiversIdsByCard(c.getId());
-				if (!giversId.isEmpty()) {
-					for (Long g : giversId) {
-						if (g != userID) {
-							User giver = userSrv.getById(g);
-							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
-								Boolean isCompatible = false;
-								for(Card wishedGiver: wishedCardsGiver) {
-									if(wishedGiver.getRarity()==4 && !isCompatible) {
-										for(Card givedWisher: toGiveCards) {
-											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity4 = wishedGiver;
-											}
-										}
-									}
-								}
-								if(isCompatible == true && isThereRarity4 == false) {
-									giverRarity4 = giver;
-									cardWishedRarity4 = c;
-									isThereRarity4 = true;
-								}
-							}
-						}
-
-					}
-				}
-			}
-		}
-		wishedCardsFind.add(cardWishedRarity0);
-		wishedCardsFind.add(cardWishedRarity1);
-		wishedCardsFind.add(cardWishedRarity2);
-		wishedCardsFind.add(cardWishedRarity3);
-		wishedCardsFind.add(cardWishedRarity4);
-		givers.add(giverRarity0);
-		givers.add(giverRarity1);
-		givers.add(giverRarity2);
-		givers.add(giverRarity3);
-		givers.add(giverRarity4);
-		if(cardWishedRarity0.getId() != null) {
-			exchangeRarity0.setCard1(cardGivedRarity0);
-			exchangeRarity0.setCard2(cardWishedRarity0);
-			exchangeRarity0.setUser1(user);
-			exchangeRarity0.setUser2(giverRarity0);
-		}
-		exchangesProposal.add(exchangeRarity0);
-		return givers;
-	}
-	
-	public List<Card> getWishedFind(Long userID) {
-		User user = new User();
-		user = userSrv.getById(userID);
-		Set<Card> wishedCards = user.getWishList();
-		Set<Card> toGiveCards = user.getToGiveList();
-		List<User> givers = new ArrayList<>();
-		List<Card> wishedCardsFind = new ArrayList<>();
-		List<Exchange> exchangesProposal = new ArrayList<>();
-		Boolean isThereRarity0 = false;
-		User giverRarity0 = new User();
-		Card cardWishedRarity0 = new Card();
-		Card cardGivedRarity0 = new Card();
-		Exchange exchangeRarity0 = new Exchange();
-		Boolean isThereRarity1 = false;
-		User giverRarity1 = new User();
-		Card cardWishedRarity1 = new Card();
-		Exchange exchangeRarity1 = new Exchange();
-		Boolean isThereRarity2 = false;
-		User giverRarity2 = new User();
-		Card cardWishedRarity2 = new Card();
-		Exchange exchangeRarity2 = new Exchange();
-		Boolean isThereRarity3 = false;
-		User giverRarity3 = new User();
-		Card cardWishedRarity3 = new Card();
-		Exchange exchangeRarity3 = new Exchange();
-		Boolean isThereRarity4 = false;
-		User giverRarity4 = new User();
-		Card cardWishedRarity4 = new Card();
-		Exchange exchangeRarity4 = new Exchange();
-		for (Card c : wishedCards) {
-			if (c.getRarity() == 0 && isThereRarity0 == false) {
-				List<Long> giversId = cardSrv.getGiversIdsByCard(c.getId());
-				if (!giversId.isEmpty()) {
-					for (Long g : giversId) {
-						if (g != userID) {
-							User giver = userSrv.getById(g);
-							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
-								Boolean isCompatible = false;
-								for(Card wishedGiver: wishedCardsGiver) {
-									if(wishedGiver.getRarity()==0) {
-										for(Card givedWisher: toGiveCards) {
-											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber()) {
-												isCompatible=true;
-												cardGivedRarity0 = wishedGiver;
-											}
-										}
-									}
-								}
-								if(isCompatible == true && isThereRarity0 == false) {
-									giverRarity0 = giver;
-									cardWishedRarity0 = c;
-									isCompatible = true;
-									isThereRarity0 = true;
-								}
-							}
-						}
-
-					}
-				}
-			}
-		}
-		wishedCardsFind.add(cardWishedRarity0);
-		givers.add(giverRarity0);
-		return wishedCardsFind;
+	public void cancelExchange (Exchange exchange) {
+		User user1 = new User();
+		user1 = exchange.getUser1();
+		User user2 = new User();
+		user2 = exchange.getUser2();
+		Card card1 = new Card();
+		card1 = exchange.getCard1();
+		Card card2 = new Card();
+		card2 = exchange.getCard2();
+		Set<Card> wish_cards_user1 = exchange.getUser1().getWishList();
+		Set<Card> wish_cards_user2 = exchange.getUser2().getWishList();
+		Set<Card> give_cards_user1 = exchange.getUser1().getToGiveList();
+		Set<Card> give_cards_user2 = exchange.getUser2().getToGiveList();
+		wish_cards_user1.add(card1);
+		wish_cards_user2.add(card2);
+		give_cards_user1.add(card2);
+		give_cards_user2.add(card1);
+		exchange.setState(State.CANCELED);
+		user1.setWishList(wish_cards_user1);
+		user2.setWishList(wish_cards_user2);
+		user1.setToGiveList(give_cards_user1);
+		user2.setToGiveList(give_cards_user2);
+		userSrv.update(user1);
+		userSrv.update(user2);
+		exchangeRepo.save(exchange);
 	}
 	
 	public List<Exchange> getNewExchanges(Long userID) {

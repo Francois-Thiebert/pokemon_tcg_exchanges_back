@@ -77,21 +77,21 @@ public class ExchangeRestController {
 		return exchanges;
 	}
 	
-	@GetMapping("/new/givers/{id}")
-	@JsonView(JsonViews.Simple.class)
-	public List<User> getNewGivers(@PathVariable Long id) {
-		List<User> givers = null;
-		givers=exchangeSrv.getGivers(id);
-		return givers;
-	}
-	
-	@GetMapping("/new/wishedFind/{id}")
-	@JsonView(JsonViews.Simple.class)
-	public List<Card> getWishedCardsFind(@PathVariable Long id) {
-		List<Card> wishedFind = null;
-		wishedFind=exchangeSrv.getWishedFind(id);
-		return wishedFind;
-	}
+//	@GetMapping("/new/givers/{id}")
+//	@JsonView(JsonViews.Simple.class)
+//	public List<User> getNewGivers(@PathVariable Long id) {
+//		List<User> givers = null;
+//		givers=exchangeSrv.getGivers(id);
+//		return givers;
+//	}
+//	
+//	@GetMapping("/new/wishedFind/{id}")
+//	@JsonView(JsonViews.Simple.class)
+//	public List<Card> getWishedCardsFind(@PathVariable Long id) {
+//		List<Card> wishedFind = null;
+//		wishedFind=exchangeSrv.getWishedFind(id);
+//		return wishedFind;
+//	}
 
 	@PostMapping({ "", "/create" })
 	@JsonView(JsonViews.Simple.class)
@@ -127,6 +127,14 @@ public class ExchangeRestController {
 			exchangeEnBase.setState(exchange.getState());
 		}
 		exchangeSrv.update(exchangeEnBase);
+		return exchangeEnBase;
+	}
+	
+	@PutMapping("/cancel/{id}")
+	@JsonView(JsonViews.Simple.class)
+	public Exchange cancel(@PathVariable Long id) {
+		Exchange exchangeEnBase = exchangeSrv.getById(id);
+		exchangeSrv.cancelExchange(exchangeEnBase);
 		return exchangeEnBase;
 	}
 
