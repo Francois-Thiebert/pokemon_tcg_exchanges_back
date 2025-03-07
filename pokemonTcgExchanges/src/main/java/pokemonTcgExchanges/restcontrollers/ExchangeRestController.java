@@ -22,6 +22,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.fasterxml.jackson.annotation.JsonView;
 
 import pokemonTcgExchanges.entities.Card;
+import pokemonTcgExchanges.entities.Cause;
 import pokemonTcgExchanges.entities.Exchange;
 import pokemonTcgExchanges.entities.User;
 import pokemonTcgExchanges.jsonviews.JsonViews;
@@ -77,6 +78,12 @@ public class ExchangeRestController {
 		return exchanges;
 	}
 	
+	@GetMapping("/cancel_history/{idUserA}/{idUserB}/{idCardA}/{idCardB}")
+	@JsonView(JsonViews.Simple.class)
+	public Boolean getCancelHistory(@PathVariable Long idUserA, @PathVariable Long idUserB, @PathVariable Long idCardA, @PathVariable Long idCardB) {
+		return exchangeSrv.isCancelHistory(idCardA, idCardB, idUserA, idUserB);
+	}
+	
 //	@GetMapping("/new/givers/{id}")
 //	@JsonView(JsonViews.Simple.class)
 //	public List<User> getNewGivers(@PathVariable Long id) {
@@ -130,13 +137,17 @@ public class ExchangeRestController {
 		return exchangeEnBase;
 	}
 	
-	@PutMapping("/cancel/{id}")
+	@PutMapping("/cancel/{idCanceldExchange}/{idUser}/{cause}")
 	@JsonView(JsonViews.Simple.class)
-	public Exchange cancel(@PathVariable Long id) {
-		Exchange exchangeEnBase = exchangeSrv.getById(id);
-		exchangeSrv.cancelExchange(exchangeEnBase);
-		return exchangeEnBase;
+	public Exchange cancel(
+	        @PathVariable Long idCanceldExchange, 
+	        @PathVariable Long idUser, 
+	        @PathVariable Cause cause) {
+	    Exchange exchangeEnBase = exchangeSrv.getById(idCanceldExchange);
+	    exchangeSrv.cancelExchange(exchangeEnBase, idUser, cause);
+	    return exchangeEnBase;
 	}
+
 
 	@DeleteMapping("/{id}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)

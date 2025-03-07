@@ -13,11 +13,14 @@ import javax.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import pokemonTcgExchanges.entities.CanceldExchange;
 import pokemonTcgExchanges.entities.Card;
+import pokemonTcgExchanges.entities.Cause;
 import pokemonTcgExchanges.entities.Exchange;
 import pokemonTcgExchanges.entities.State;
 import pokemonTcgExchanges.entities.User;
 import pokemonTcgExchanges.exceptions.ExchangeException;
+import pokemonTcgExchanges.repositories.CanceldExchangeRepository;
 import pokemonTcgExchanges.repositories.ExchangeRepository;
 
 @Service
@@ -27,6 +30,8 @@ public class ExchangeService {
 	private Validator validator;
 	@Autowired
 	private ExchangeRepository exchangeRepo;
+	@Autowired
+	private CanceldExchangeRepository cancelRepo;
 	@Autowired
 	private UserService userSrv;
 	@Autowired
@@ -140,7 +145,10 @@ public class ExchangeService {
 		exchangeRepo.delete(exchangeEnBase);
 	}
 	
-	public void cancelExchange (Exchange exchange) {
+	public void cancelExchange (Exchange exchange, Long userId, Cause cause) {
+		CanceldExchange cancel = new CanceldExchange();
+		cancel.setExchange(exchange);
+		cancel.setCause(cause);
 		User user1 = new User();
 		user1 = exchange.getUser1();
 		User user2 = new User();
@@ -162,9 +170,26 @@ public class ExchangeService {
 		user2.setWishList(wish_cards_user2);
 		user1.setToGiveList(give_cards_user1);
 		user2.setToGiveList(give_cards_user2);
+		if(userId == user1.getId()) {
+			if(cancel.getCause() == Cause.NotSearched) {
+				wish_cards_user1.remove(card1);
+			}
+			if(cancel.getCause() == Cause.NotToGive) {
+				give_cards_user1.remove(card2);
+			}
+		}
+		if(userId == user2.getId()) {
+			if(cancel.getCause() == Cause.NotSearched) {
+				wish_cards_user2.remove(card2);
+			}
+			if(cancel.getCause() == Cause.NotToGive) {
+				give_cards_user2.remove(card1);
+			}
+		}
 		userSrv.update(user1);
 		userSrv.update(user2);
 		exchangeRepo.save(exchange);
+		cancelRepo.save(cancel);
 	}
 	
 	public List<Exchange> getNewExchanges(Long userID) {
@@ -214,8 +239,10 @@ public class ExchangeService {
 									if(wishedGiver.getRarity()==0 && !isCompatible) {
 										for(Card givedWisher: toGiveCards) {
 											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity0 = wishedGiver;
+												if(!isCancelHistory(c.getId(), wishedGiver.getId(), userID, g)) {
+													isCompatible=true;
+													cardGivedRarity0 = wishedGiver;
+												}
 											}
 										}
 									}
@@ -244,8 +271,10 @@ public class ExchangeService {
 									if(wishedGiver.getRarity()==1 && !isCompatible) {
 										for(Card givedWisher: toGiveCards) {
 											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity1 = wishedGiver;
+												if(!isCancelHistory(c.getId(), wishedGiver.getId(), userID, g)) {
+													isCompatible=true;
+													cardGivedRarity1 = wishedGiver;
+												}
 											}
 										}
 									}
@@ -274,8 +303,10 @@ public class ExchangeService {
 									if(wishedGiver.getRarity()==2 && !isCompatible) {
 										for(Card givedWisher: toGiveCards) {
 											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity2 = wishedGiver;
+												if(!isCancelHistory(c.getId(), wishedGiver.getId(), userID, g)) {
+													isCompatible=true;
+													cardGivedRarity2 = wishedGiver;
+												}
 											}
 										}
 									}
@@ -304,8 +335,10 @@ public class ExchangeService {
 									if(wishedGiver.getRarity()==3 && !isCompatible) {
 										for(Card givedWisher: toGiveCards) {
 											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity3 = wishedGiver;
+												if(!isCancelHistory(c.getId(), wishedGiver.getId(), userID, g)) {
+													isCompatible=true;
+													cardGivedRarity3 = wishedGiver;
+												}
 											}
 										}
 									}
@@ -334,8 +367,10 @@ public class ExchangeService {
 									if(wishedGiver.getRarity()==4 && !isCompatible) {
 										for(Card givedWisher: toGiveCards) {
 											if(wishedGiver.getSerialNumber()==givedWisher.getSerialNumber() && !isCompatible) {
-												isCompatible=true;
-												cardGivedRarity4 = wishedGiver;
+												if(!isCancelHistory(c.getId(), wishedGiver.getId(), userID, g)) {
+													isCompatible=true;
+													cardGivedRarity4 = wishedGiver;
+												}
 											}
 										}
 									}
@@ -398,6 +433,16 @@ public class ExchangeService {
 			exchangesProposal.add(exchangeRarity4);
 		}
 		return exchangesProposal;
+	}
+
+	
+	public Boolean isCancelHistory(Long cardAId, Long cardBId, Long userAId, Long userBId) {
+	    CanceldExchange cancelHistory = cancelRepo.findCancelHistory(userAId, userBId, cardAId, cardBId);
+	    if (cancelHistory != null) {
+		       return true; 
+		}else {
+		      return false; 
+		}
 	}
 
 }
