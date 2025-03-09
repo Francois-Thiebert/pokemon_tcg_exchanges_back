@@ -1,0 +1,830 @@
+2025-03-08 23:59:53,956 DEBUG o.j.l.LoggerProviders [background-preinit] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2025-03-08 23:59:53,980 INFO o.s.b.StartupInfoLogger [main] Starting pokemonTcgExchangesSpringBootApplication using Java 17.0.7 on ITEM-5CG31328QC with PID 32632 (C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges\target\classes started by fthiebert in C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges)
+2025-03-08 23:59:53,981 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-03-08 23:59:53,982 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-03-08 23:59:54,293 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:54,293 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:54,294 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:54,295 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:54,299 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:54,801 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:54,802 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:54,803 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:54,803 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:54,804 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:55,038 DEBUG o.a.j.l.DirectJDKLog [main] The Apache Tomcat Native library could not be found using names [tcnative-2, libtcnative-2, tcnative-1, libtcnative-1] on the java.library.path [C:\Users\fthiebert\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WindowsPowerShell\Scripts\HP.ClientScriptLibrary;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\IP-LABEL\NEWTEST\Robot\EXE;C:\Program Files\Git\cmd;C:\Users\fthiebert\AppData\Local\Programs\Python\Launcher\;C:\Users\fthiebert\prog\apache-maven-3.9.2\bin;C:\Users\fthiebert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fthiebert\AppData\Roaming\npm;C:\Program Files\Splunk;C:\Users\fthiebert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;;C:\WINDOWS\System32;;.]. The errors reported were [Can't load library: C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges\bin\tcnative-2.dll, Can't load library: C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges\bin\libtcnative-2.dll, Can't load library: C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges\bin\tcnative-1.dll, Can't load library: C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges\bin\libtcnative-1.dll, no tcnative-2 in java.library.path: C:\Users\fthiebert\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WindowsPowerShell\Scripts\HP.ClientScriptLibrary;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\IP-LABEL\NEWTEST\Robot\EXE;C:\Program Files\Git\cmd;C:\Users\fthiebert\AppData\Local\Programs\Python\Launcher\;C:\Users\fthiebert\prog\apache-maven-3.9.2\bin;C:\Users\fthiebert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fthiebert\AppData\Roaming\npm;C:\Program Files\Splunk;C:\Users\fthiebert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;;C:\WINDOWS\System32;;., no libtcnative-2 in java.library.path: C:\Users\fthiebert\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WindowsPowerShell\Scripts\HP.ClientScriptLibrary;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\IP-LABEL\NEWTEST\Robot\EXE;C:\Program Files\Git\cmd;C:\Users\fthiebert\AppData\Local\Programs\Python\Launcher\;C:\Users\fthiebert\prog\apache-maven-3.9.2\bin;C:\Users\fthiebert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fthiebert\AppData\Roaming\npm;C:\Program Files\Splunk;C:\Users\fthiebert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;;C:\WINDOWS\System32;;., no tcnative-1 in java.library.path: C:\Users\fthiebert\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WindowsPowerShell\Scripts\HP.ClientScriptLibrary;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\IP-LABEL\NEWTEST\Robot\EXE;C:\Program Files\Git\cmd;C:\Users\fthiebert\AppData\Local\Programs\Python\Launcher\;C:\Users\fthiebert\prog\apache-maven-3.9.2\bin;C:\Users\fthiebert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fthiebert\AppData\Roaming\npm;C:\Program Files\Splunk;C:\Users\fthiebert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;;C:\WINDOWS\System32;;., no libtcnative-1 in java.library.path: C:\Users\fthiebert\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WindowsPowerShell\Scripts\HP.ClientScriptLibrary;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\IP-LABEL\NEWTEST\Robot\EXE;C:\Program Files\Git\cmd;C:\Users\fthiebert\AppData\Local\Programs\Python\Launcher\;C:\Users\fthiebert\prog\apache-maven-3.9.2\bin;C:\Users\fthiebert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fthiebert\AppData\Roaming\npm;C:\Program Files\Splunk;C:\Users\fthiebert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;;C:\WINDOWS\System32;;.]
+org.apache.tomcat.jni.LibraryNotFoundError: Can't load library: C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges\bin\tcnative-2.dll, Can't load library: C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges\bin\libtcnative-2.dll, Can't load library: C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges\bin\tcnative-1.dll, Can't load library: C:\Users\fthiebert\Documents\Git\TCG Pocket Exchanges\TCG Pocket Exchanges Back\pokemon_tcg_exchanges_back\pokemonTcgExchanges\bin\libtcnative-1.dll, no tcnative-2 in java.library.path: C:\Users\fthiebert\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WindowsPowerShell\Scripts\HP.ClientScriptLibrary;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\IP-LABEL\NEWTEST\Robot\EXE;C:\Program Files\Git\cmd;C:\Users\fthiebert\AppData\Local\Programs\Python\Launcher\;C:\Users\fthiebert\prog\apache-maven-3.9.2\bin;C:\Users\fthiebert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fthiebert\AppData\Roaming\npm;C:\Program Files\Splunk;C:\Users\fthiebert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;;C:\WINDOWS\System32;;., no libtcnative-2 in java.library.path: C:\Users\fthiebert\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WindowsPowerShell\Scripts\HP.ClientScriptLibrary;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\IP-LABEL\NEWTEST\Robot\EXE;C:\Program Files\Git\cmd;C:\Users\fthiebert\AppData\Local\Programs\Python\Launcher\;C:\Users\fthiebert\prog\apache-maven-3.9.2\bin;C:\Users\fthiebert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fthiebert\AppData\Roaming\npm;C:\Program Files\Splunk;C:\Users\fthiebert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;;C:\WINDOWS\System32;;., no tcnative-1 in java.library.path: C:\Users\fthiebert\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WindowsPowerShell\Scripts\HP.ClientScriptLibrary;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\IP-LABEL\NEWTEST\Robot\EXE;C:\Program Files\Git\cmd;C:\Users\fthiebert\AppData\Local\Programs\Python\Launcher\;C:\Users\fthiebert\prog\apache-maven-3.9.2\bin;C:\Users\fthiebert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fthiebert\AppData\Roaming\npm;C:\Program Files\Splunk;C:\Users\fthiebert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;;C:\WINDOWS\System32;;., no libtcnative-1 in java.library.path: C:\Users\fthiebert\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin/server;C:/Users/fthiebert/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X64\;C:\Program Files (x86)\Pulse Secure\VC142.CRT\X86\;C:\Program Files (x86)\Common Files\Pulse Secure\TNC Client Plugin\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\WindowsPowerShell\Scripts\HP.ClientScriptLibrary;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\IP-LABEL\NEWTEST\Robot\EXE;C:\Program Files\Git\cmd;C:\Users\fthiebert\AppData\Local\Programs\Python\Launcher\;C:\Users\fthiebert\prog\apache-maven-3.9.2\bin;C:\Users\fthiebert\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fthiebert\AppData\Roaming\npm;C:\Program Files\Splunk;C:\Users\fthiebert\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;;C:\WINDOWS\System32;;.
+	at org.apache.tomcat.jni.Library.<init>(Library.java:89)
+	at org.apache.tomcat.jni.Library.initialize(Library.java:230)
+	at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:194)
+	at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getDefaultServerLifecycleListeners(TomcatServletWebServerFactory.java:182)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.<init>(TomcatServletWebServerFactory.java:129)
+	at org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat.tomcatServletWebServerFactory(ServletWebServerFactoryConfiguration.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:219)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at pokemonTcgExchanges.pokemonTcgExchangesSpringBootApplication.main(pokemonTcgExchangesSpringBootApplication.java:10)
+2025-03-08 23:59:55,147 DEBUG o.a.j.l.DirectJDKLog [main] Class not found so assuming code is running on a pre-Java 19 JVM
+java.lang.ClassNotFoundException: java.lang.WrongThreadException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:375)
+	at org.apache.tomcat.util.compat.Jre19Compat.<clinit>(Jre19Compat.java:37)
+	at org.apache.tomcat.util.compat.JreCompat.<clinit>(JreCompat.java:72)
+	at org.apache.catalina.startup.Tomcat.<clinit>(Tomcat.java:1299)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:194)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at pokemonTcgExchanges.pokemonTcgExchangesSpringBootApplication.main(pokemonTcgExchangesSpringBootApplication.java:10)
+2025-03-08 23:59:55,201 DEBUG o.a.j.l.DirectJDKLog [main] IntrospectionUtils: setProperty(class org.apache.coyote.http11.Http11NioProtocol port=8080)
+2025-03-08 23:59:55,213 DEBUG o.a.j.l.DirectJDKLog [main] IntrospectionUtils: setProperty(class org.apache.coyote.http11.Http11NioProtocol bindOnInit=false)
+2025-03-08 23:59:55,213 DEBUG o.a.j.l.DirectJDKLog [main] IntrospectionUtils: setProperty(class org.apache.tomcat.util.net.NioEndpoint bindOnInit=false)
+2025-03-08 23:59:55,216 DEBUG o.a.j.l.DirectJDKLog [main] IntrospectionUtils: setProperty(class org.apache.coyote.http11.Http11NioProtocol maxPostSize=2097152)
+2025-03-08 23:59:55,216 DEBUG o.a.j.l.DirectJDKLog [main] IntrospectionUtils: setProperty(class org.apache.tomcat.util.net.NioEndpoint maxPostSize=2097152)
+2025-03-08 23:59:55,233 DEBUG o.a.j.l.DirectJDKLog [main] Add child StandardHost[localhost] StandardEngine[Tomcat]
+2025-03-08 23:59:55,255 DEBUG o.a.j.l.DirectJDKLog [main] Add child TomcatEmbeddedContext[/tcgexchanges] StandardEngine[Tomcat].StandardHost[localhost]
+2025-03-08 23:59:55,261 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardServer[-1]] to [INITIALIZING]
+2025-03-08 23:59:55,269 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@7e62cfa3] to [INITIALIZING]
+2025-03-08 23:59:55,269 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@7e62cfa3] to [INITIALIZED]
+2025-03-08 23:59:55,269 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardService[Tomcat]] to [INITIALIZING]
+2025-03-08 23:59:55,269 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat]] to [INITIALIZING]
+2025-03-08 23:59:55,270 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat]] to [INITIALIZED]
+2025-03-08 23:59:55,272 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.mapper.MapperListener@5be052ca] to [INITIALIZING]
+2025-03-08 23:59:55,272 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.mapper.MapperListener@5be052ca] to [INITIALIZED]
+2025-03-08 23:59:55,274 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [Connector[HTTP/1.1-8080]] to [INITIALIZING]
+2025-03-08 23:59:55,278 DEBUG o.a.j.l.DirectJDKLog [main] IntrospectionUtils: setProperty(class org.apache.coyote.http11.Http11NioProtocol parseBodyMethods=POST)
+2025-03-08 23:59:55,278 DEBUG o.a.j.l.DirectJDKLog [main] IntrospectionUtils: setProperty(class org.apache.tomcat.util.net.NioEndpoint parseBodyMethods=POST)
+2025-03-08 23:59:55,278 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-08 23:59:55,278 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [Connector[HTTP/1.1-8080]] to [INITIALIZED]
+2025-03-08 23:59:55,278 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardService[Tomcat]] to [INITIALIZED]
+2025-03-08 23:59:55,279 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardServer[-1]] to [INITIALIZED]
+2025-03-08 23:59:55,279 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardServer[-1]] to [STARTING_PREP]
+2025-03-08 23:59:55,279 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardServer[-1]] to [STARTING]
+2025-03-08 23:59:55,279 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@7e62cfa3] to [STARTING_PREP]
+2025-03-08 23:59:55,279 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@7e62cfa3] to [STARTING]
+2025-03-08 23:59:55,279 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@7e62cfa3] to [STARTED]
+2025-03-08 23:59:55,279 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardService[Tomcat]] to [STARTING_PREP]
+2025-03-08 23:59:55,279 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-03-08 23:59:55,279 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardService[Tomcat]] to [STARTING]
+2025-03-08 23:59:55,279 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat]] to [STARTING_PREP]
+2025-03-08 23:59:55,279 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-03-08 23:59:55,281 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [INITIALIZING]
+2025-03-08 23:59:55,281 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [INITIALIZED]
+2025-03-08 23:59:55,281 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [STARTING_PREP]
+2025-03-08 23:59:55,282 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [STARTING]
+2025-03-08 23:59:55,282 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [SimpleRealm[StandardEngine[Tomcat]]] to [STARTED]
+2025-03-08 23:59:55,283 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [INITIALIZING]
+2025-03-08 23:59:55,283 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [INITIALIZED]
+2025-03-08 23:59:55,283 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [STARTING_PREP]
+2025-03-08 23:59:55,284 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]] to [INITIALIZING]
+2025-03-08 23:59:55,285 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]] to [INITIALIZED]
+2025-03-08 23:59:55,285 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]] to [STARTING_PREP]
+2025-03-08 23:59:55,286 DEBUG o.a.j.l.DirectJDKLog [main] Starting tcgexchanges
+2025-03-08 23:59:55,296 DEBUG o.a.j.l.DirectJDKLog [main] Configuring default Resources
+2025-03-08 23:59:55,302 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.StandardRoot@5f5827d0] to [INITIALIZING]
+2025-03-08 23:59:55,304 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.StandardRoot@5f5827d0] to [INITIALIZED]
+2025-03-08 23:59:55,304 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.StandardRoot@5f5827d0] to [STARTING_PREP]
+2025-03-08 23:59:55,308 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.DirResourceSet@79f90a3a] to [INITIALIZING]
+2025-03-08 23:59:55,309 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.DirResourceSet@79f90a3a] to [INITIALIZED]
+2025-03-08 23:59:55,309 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.DirResourceSet@79f90a3a] to [STARTING_PREP]
+2025-03-08 23:59:55,309 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.DirResourceSet@79f90a3a] to [STARTING]
+2025-03-08 23:59:55,309 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.DirResourceSet@79f90a3a] to [STARTED]
+2025-03-08 23:59:55,310 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.StandardRoot@5f5827d0] to [STARTING]
+2025-03-08 23:59:55,310 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.webresources.StandardRoot@5f5827d0] to [STARTED]
+2025-03-08 23:59:55,311 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:55,312 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:55,312 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:55,313 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:55,313 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:55,345 DEBUG o.a.j.l.DirectJDKLog [main] Processing standard container startup
+2025-03-08 23:59:55,345 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZING]
+2025-03-08 23:59:55,346 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZED]
+2025-03-08 23:59:55,346 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING_PREP]
+2025-03-08 23:59:55,346 DEBUG o.a.j.l.DirectJDKLog [main] Starting this Loader
+2025-03-08 23:59:55,353 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING]
+2025-03-08 23:59:55,354 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [WebappLoader[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTED]
+2025-03-08 23:59:55,420 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZING]
+2025-03-08 23:59:55,420 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZED]
+2025-03-08 23:59:55,420 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING_PREP]
+2025-03-08 23:59:55,421 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZING]
+2025-03-08 23:59:55,422 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZED]
+2025-03-08 23:59:55,422 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING_PREP]
+2025-03-08 23:59:55,423 DEBUG o.a.j.l.DirectJDKLog [main] No SingleSignOn Valve is present
+2025-03-08 23:59:55,423 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING]
+2025-03-08 23:59:55,423 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [NonLoginAuthenticator[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTED]
+2025-03-08 23:59:55,424 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZING]
+2025-03-08 23:59:55,424 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZED]
+2025-03-08 23:59:55,425 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING_PREP]
+2025-03-08 23:59:55,425 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING]
+2025-03-08 23:59:55,425 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardContextValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTED]
+2025-03-08 23:59:55,425 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING]
+2025-03-08 23:59:55,425 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTED]
+2025-03-08 23:59:55,426 DEBUG o.a.j.l.DirectJDKLog [main] No manager found. Checking if cluster manager should be used. Cluster configured: [false], Application distributable: [false]
+2025-03-08 23:59:55,431 DEBUG o.a.j.l.DirectJDKLog [main] Configured a manager of class [org.apache.catalina.session.StandardManager]
+2025-03-08 23:59:55,432 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@e829999] to [INITIALIZING]
+2025-03-08 23:59:55,432 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@e829999] to [INITIALIZED]
+2025-03-08 23:59:55,433 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@e829999] to [STARTING_PREP]
+2025-03-08 23:59:55,434 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@e829999] to [STARTING]
+2025-03-08 23:59:55,434 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.deploy.NamingResourcesImpl@e829999] to [STARTED]
+2025-03-08 23:59:55,444 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-03-08 23:59:55,489 DEBUG o.a.j.l.DirectJDKLog [main] Add child StandardWrapper[dispatcherServlet] StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]
+2025-03-08 23:59:55,490 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]] to [INITIALIZING]
+2025-03-08 23:59:55,491 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]] to [INITIALIZED]
+2025-03-08 23:59:55,491 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]] to [STARTING_PREP]
+2025-03-08 23:59:55,491 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [INITIALIZING]
+2025-03-08 23:59:55,492 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [INITIALIZED]
+2025-03-08 23:59:55,492 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [STARTING_PREP]
+2025-03-08 23:59:55,493 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [INITIALIZING]
+2025-03-08 23:59:55,493 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [INITIALIZED]
+2025-03-08 23:59:55,493 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [STARTING_PREP]
+2025-03-08 23:59:55,493 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [STARTING]
+2025-03-08 23:59:55,493 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [STARTED]
+2025-03-08 23:59:55,493 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [STARTING]
+2025-03-08 23:59:55,493 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]]] to [STARTED]
+2025-03-08 23:59:55,493 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]] to [STARTING]
+2025-03-08 23:59:55,495 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges].StandardWrapper[dispatcherServlet]] to [STARTED]
+2025-03-08 23:59:55,519 DEBUG o.a.j.l.DirectJDKLog [main] Configuring application event listeners
+2025-03-08 23:59:55,519 DEBUG o.a.j.l.DirectJDKLog [main] Sending application start events
+2025-03-08 23:59:55,523 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZING]
+2025-03-08 23:59:55,523 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [INITIALIZED]
+2025-03-08 23:59:55,523 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING_PREP]
+2025-03-08 23:59:55,524 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@4aa2877c] to [INITIALIZING]
+2025-03-08 23:59:55,525 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@4aa2877c] to [INITIALIZED]
+2025-03-08 23:59:55,526 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@4aa2877c] to [STARTING_PREP]
+2025-03-08 23:59:55,527 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@4aa2877c] to [STARTING]
+2025-03-08 23:59:55,527 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@4aa2877c] to [STARTED]
+2025-03-08 23:59:55,527 DEBUG o.a.j.l.DirectJDKLog [main] Start: Loading persisted sessions
+2025-03-08 23:59:55,528 DEBUG o.a.j.l.DirectJDKLog [main] Loading persisted sessions from [SESSIONS.ser]
+2025-03-08 23:59:55,528 DEBUG o.a.j.l.DirectJDKLog [main] No persisted data file found
+2025-03-08 23:59:55,528 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTING]
+2025-03-08 23:59:55,528 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]]] to [STARTED]
+2025-03-08 23:59:55,529 DEBUG o.a.j.l.DirectJDKLog [main] Starting filters
+2025-03-08 23:59:55,529 DEBUG o.a.j.l.DirectJDKLog [main]  Starting filter 'requestContextFilter'
+2025-03-08 23:59:55,533 DEBUG o.a.j.l.DirectJDKLog [main]  Starting filter 'errorPageSecurityFilter'
+2025-03-08 23:59:55,535 DEBUG o.a.j.l.DirectJDKLog [main]  Starting filter 'Tomcat WebSocket (JSR356) Filter'
+2025-03-08 23:59:55,535 DEBUG o.a.j.l.DirectJDKLog [main]  Starting filter 'characterEncodingFilter'
+2025-03-08 23:59:55,536 DEBUG o.a.j.l.DirectJDKLog [main]  Starting filter 'springSecurityFilterChain'
+2025-03-08 23:59:55,536 DEBUG o.a.j.l.DirectJDKLog [main]  Starting filter 'formContentFilter'
+2025-03-08 23:59:55,536 DEBUG o.a.j.l.DirectJDKLog [main] Starting completed
+2025-03-08 23:59:55,536 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]] to [STARTING]
+2025-03-08 23:59:55,536 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[/tcgexchanges]] to [STARTED]
+2025-03-08 23:59:55,537 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZING]
+2025-03-08 23:59:55,537 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZED]
+2025-03-08 23:59:55,537 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING_PREP]
+2025-03-08 23:59:55,537 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZING]
+2025-03-08 23:59:55,537 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZED]
+2025-03-08 23:59:55,537 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING_PREP]
+2025-03-08 23:59:55,538 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING]
+2025-03-08 23:59:55,538 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTED]
+2025-03-08 23:59:55,538 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZING]
+2025-03-08 23:59:55,539 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZED]
+2025-03-08 23:59:55,539 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING_PREP]
+2025-03-08 23:59:55,540 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING]
+2025-03-08 23:59:55,540 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTED]
+2025-03-08 23:59:55,540 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING]
+2025-03-08 23:59:55,540 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTED]
+2025-03-08 23:59:55,541 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [STARTING]
+2025-03-08 23:59:55,541 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [STARTED]
+2025-03-08 23:59:55,541 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [INITIALIZING]
+2025-03-08 23:59:55,541 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [INITIALIZED]
+2025-03-08 23:59:55,541 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [STARTING_PREP]
+2025-03-08 23:59:55,541 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [INITIALIZING]
+2025-03-08 23:59:55,542 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [INITIALIZED]
+2025-03-08 23:59:55,542 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [STARTING_PREP]
+2025-03-08 23:59:55,543 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [STARTING]
+2025-03-08 23:59:55,543 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [STARTED]
+2025-03-08 23:59:55,543 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [STARTING]
+2025-03-08 23:59:55,543 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [STARTED]
+2025-03-08 23:59:55,543 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat]] to [STARTING]
+2025-03-08 23:59:55,546 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardEngine[Tomcat]] to [STARTED]
+2025-03-08 23:59:55,546 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.mapper.MapperListener@5be052ca] to [STARTING_PREP]
+2025-03-08 23:59:55,546 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.mapper.MapperListener@5be052ca] to [STARTING]
+2025-03-08 23:59:55,547 DEBUG o.a.j.l.DirectJDKLog [main] Registered host [localhost]
+2025-03-08 23:59:55,548 DEBUG o.a.j.l.DirectJDKLog [main] Register Wrapper [dispatcherServlet] in Context [/tcgexchanges] for service [StandardService[Tomcat]]
+2025-03-08 23:59:55,548 DEBUG o.a.j.l.DirectJDKLog [main] Register Context [/tcgexchanges] for service [StandardService[Tomcat]]
+2025-03-08 23:59:55,549 DEBUG o.a.j.l.DirectJDKLog [main] Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+2025-03-08 23:59:55,549 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [org.apache.catalina.mapper.MapperListener@5be052ca] to [STARTED]
+2025-03-08 23:59:55,549 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardService[Tomcat]] to [STARTED]
+2025-03-08 23:59:55,549 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [StandardServer[-1]] to [STARTED]
+2025-03-08 23:59:55,579 DEBUG c.z.h.HikariConfig [main] Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2f333739
+2025-03-08 23:59:55,866 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:55,866 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:55,866 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:55,867 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:55,868 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:56,209 DEBUG c.z.h.HikariConfig [main] HikariPool-1 - configuration:
+2025-03-08 23:59:56,212 DEBUG c.z.h.HikariConfig [main] allowPoolSuspension................................false
+2025-03-08 23:59:56,213 DEBUG c.z.h.HikariConfig [main] autoCommit................................true
+2025-03-08 23:59:56,214 DEBUG c.z.h.HikariConfig [main] catalog................................none
+2025-03-08 23:59:56,214 DEBUG c.z.h.HikariConfig [main] connectionInitSql................................none
+2025-03-08 23:59:56,214 DEBUG c.z.h.HikariConfig [main] connectionTestQuery................................none
+2025-03-08 23:59:56,214 DEBUG c.z.h.HikariConfig [main] connectionTimeout................................30000
+2025-03-08 23:59:56,215 DEBUG c.z.h.HikariConfig [main] dataSource................................none
+2025-03-08 23:59:56,215 DEBUG c.z.h.HikariConfig [main] dataSourceClassName................................none
+2025-03-08 23:59:56,216 DEBUG c.z.h.HikariConfig [main] dataSourceJNDI................................none
+2025-03-08 23:59:56,216 DEBUG c.z.h.HikariConfig [main] dataSourceProperties................................{password=<masked>}
+2025-03-08 23:59:56,217 DEBUG c.z.h.HikariConfig [main] driverClassName................................"com.mysql.cj.jdbc.Driver"
+2025-03-08 23:59:56,217 DEBUG c.z.h.HikariConfig [main] exceptionOverrideClassName................................none
+2025-03-08 23:59:56,217 DEBUG c.z.h.HikariConfig [main] healthCheckProperties................................{}
+2025-03-08 23:59:56,217 DEBUG c.z.h.HikariConfig [main] healthCheckRegistry................................none
+2025-03-08 23:59:56,217 DEBUG c.z.h.HikariConfig [main] idleTimeout................................600000
+2025-03-08 23:59:56,217 DEBUG c.z.h.HikariConfig [main] initializationFailTimeout................................1
+2025-03-08 23:59:56,218 DEBUG c.z.h.HikariConfig [main] isolateInternalQueries................................false
+2025-03-08 23:59:56,219 DEBUG c.z.h.HikariConfig [main] jdbcUrl................................jdbc:mysql://localhost:3306/tcgexchanges
+2025-03-08 23:59:56,219 DEBUG c.z.h.HikariConfig [main] keepaliveTime................................0
+2025-03-08 23:59:56,219 DEBUG c.z.h.HikariConfig [main] leakDetectionThreshold................................0
+2025-03-08 23:59:56,219 DEBUG c.z.h.HikariConfig [main] maxLifetime................................1800000
+2025-03-08 23:59:56,219 DEBUG c.z.h.HikariConfig [main] maximumPoolSize................................10
+2025-03-08 23:59:56,219 DEBUG c.z.h.HikariConfig [main] metricRegistry................................none
+2025-03-08 23:59:56,219 DEBUG c.z.h.HikariConfig [main] metricsTrackerFactory................................none
+2025-03-08 23:59:56,219 DEBUG c.z.h.HikariConfig [main] minimumIdle................................10
+2025-03-08 23:59:56,220 DEBUG c.z.h.HikariConfig [main] password................................<masked>
+2025-03-08 23:59:56,220 DEBUG c.z.h.HikariConfig [main] poolName................................"HikariPool-1"
+2025-03-08 23:59:56,220 DEBUG c.z.h.HikariConfig [main] readOnly................................false
+2025-03-08 23:59:56,221 DEBUG c.z.h.HikariConfig [main] registerMbeans................................false
+2025-03-08 23:59:56,221 DEBUG c.z.h.HikariConfig [main] scheduledExecutor................................none
+2025-03-08 23:59:56,221 DEBUG c.z.h.HikariConfig [main] schema................................none
+2025-03-08 23:59:56,221 DEBUG c.z.h.HikariConfig [main] threadFactory................................internal
+2025-03-08 23:59:56,221 DEBUG c.z.h.HikariConfig [main] transactionIsolation................................default
+2025-03-08 23:59:56,221 DEBUG c.z.h.HikariConfig [main] username................................"root"
+2025-03-08 23:59:56,221 DEBUG c.z.h.HikariConfig [main] validationTimeout................................5000
+2025-03-08 23:59:56,420 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:56,424 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:56,425 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:56,425 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:56,425 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:56,651 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [main] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,653 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [main] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,669 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [main]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:56,714 DEBUG c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a8d676e
+2025-03-08 23:59:56,828 DEBUG c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2025-03-08 23:59:56,847 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,848 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,854 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:56,860 DEBUG c.z.h.p.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76a344db
+2025-03-08 23:59:56,873 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,873 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,879 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:56,884 DEBUG c.z.h.p.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27813df9
+2025-03-08 23:59:56,897 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,898 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,903 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:56,908 DEBUG c.z.h.p.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44fa5e11
+2025-03-08 23:59:56,926 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,927 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,932 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:56,938 DEBUG c.z.h.p.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23cfe6d9
+2025-03-08 23:59:56,951 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,953 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,958 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:56,963 DEBUG c.z.h.p.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7604f6e
+2025-03-08 23:59:56,970 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:56,971 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:56,971 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:56,972 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:56,973 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:56,977 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,978 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:56,983 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:56,988 DEBUG c.z.h.p.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d5f26f2
+2025-03-08 23:59:57,002 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:57,003 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:57,006 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:57,012 DEBUG c.z.h.p.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b4da16c
+2025-03-08 23:59:57,024 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:57,025 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:57,029 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:57,034 DEBUG c.z.h.p.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69ca0b5d
+2025-03-08 23:59:57,059 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:2, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_Server_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:-1009007311, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:57,059 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder] X509Certificate: Alg:SHA256withRSA, Serial:1, Subject:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Issuer:CN=MySQL_Server_8.0.33_Auto_Generated_CA_Certificate, Key type:RSA, Length:2048, Cert Id:1126605099, Valid from:12/05/2023 14:20, Valid until:09/05/2033 14:20
+2025-03-08 23:59:57,064 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [HikariPool-1 connection adder]  TLSHandshake: localhost:3306, TLSv1.3, TLS_AES_256_GCM_SHA384, -1009007311
+2025-03-08 23:59:57,068 DEBUG c.z.h.p.HikariPool$PoolEntryCreator [HikariPool-1 connection adder] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2453507a
+2025-03-08 23:59:57,068 DEBUG c.z.h.p.HikariPool [HikariPool-1 connection adder] HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2025-03-08 23:59:57,475 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:57,476 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:57,476 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:57,477 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:57,477 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:58,030 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:58,031 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:58,031 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:58,032 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:58,032 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:58,535 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:58,535 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:58,535 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:58,535 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:58,536 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:59,038 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,039 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,039 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,040 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:59,041 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: [127.0.0.1] exception: 
+javax.management.InstanceNotFoundException: org.springframework.boot:type=Admin,name=SpringApplication
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1088)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getAttribute(DefaultMBeanServerInterceptor.java:640)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.getAttribute(JmxMBeanServer.java:679)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1449)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.getAttribute(RMIConnectionImpl.java:639)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-08 23:59:59,110 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 
+	p.r.AuthentificationRestController:
+	{GET [/api/auth]}: authentification(User)
+2025-03-08 23:59:59,121 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 
+	p.r.CardRestController:
+	{PUT [/api/card/{id}]}: update(Card,Long)
+	{DELETE [/api/card/{id}]}: delete(Long)
+	{POST [/api/card/create || /api/card]}: create(Card,BindingResult)
+	{GET [/api/card/all]}: getAll()
+	{GET [/api/card/{id}]}: getById(Long)
+	{GET [/api/card/wished/user/{Userid}/rarity/{rarity}]}: getByxWishedByRarity(Long,Integer)
+	{GET [/api/card/giver/{id}]}: getGiverByCard(Long)
+	{GET [/api/card]}: getAllExchangable()
+	{GET [/api/card/collection/{collection}]}: getByCollection(Integer)
+	{GET [/api/card/givers/{id}]}: getGiversByCard(Long)
+	{GET [/api/card/gived/{id}]}: getGivedCard(Long)
+	{GET [/api/card/exchange/{id}]}: getByExchange(Long)
+	{GET [/api/card/topwished/user/{Userid}]}: getTopWishedByUser(Long)
+2025-03-08 23:59:59,126 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 
+	p.r.ExchangeRestController:
+	{PUT [/api/exchange/{id}]}: update(Exchange,Long)
+	{DELETE [/api/exchange/{id}]}: delete(Long)
+	{POST [/api/exchange/create || /api/exchange]}: create(Exchange,BindingResult)
+	{GET [/api/exchange]}: getAll()
+	{PUT [/api/exchange/cancel/{idCanceldExchange}/{idUser}/{cause}]}: cancel(Long,Long,Cause)
+	{GET [/api/exchange/{id}]}: getById(Long)
+	{GET [/api/exchange/card/{id}]}: getByCard(Long)
+	{GET [/api/exchange/user/{id}]}: getByUser(Long)
+	{GET [/api/exchange/cancel_history/{idUserA}/{idUserB}/{idCardA}/{idCardB}]}: getCancelHistory(Long,Long,Long,Long)
+	{GET [/api/exchange/new/{id}]}: getNewExchanges(Long)
+2025-03-08 23:59:59,129 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 
+	p.r.UserRestController:
+	{PUT [/api/user/{id}]}: update(User,Long)
+	{DELETE [/api/user/{id}]}: delete(Long)
+	{POST [/api/user/inscription || /api/user]}: create(User,BindingResult)
+	{GET [/api/user]}: getAll()
+	{GET [/api/user/{id}]}: getById(Long)
+	{GET [/api/user/all/{id}]}: getUserAllById(Long)
+	{GET [/api/user/exchange/{id}]}: getUsersMatch(Long)
+	{GET [/api/user/giverCard/{id}]}: getUserByGiveCard(Long)
+	{GET [/api/user/idByExchange/{id}]}: getUsersIdByMatchs(Long)
+	{GET [/api/user/login/check/{login}]}: checkLogin(String)
+2025-03-08 23:59:59,132 DEBUG o.s.w.s.h.AbstractHandlerMethodMapping [main] 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-08 23:59:59,144 DEBUG o.s.w.s.h.AbstractDetectingUrlHandlerMapping [main] 'beanNameHandlerMapping' {}
+2025-03-08 23:59:59,162 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2025-03-08 23:59:59,301 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [Connector[HTTP/1.1-8080]] to [STARTING_PREP]
+2025-03-08 23:59:59,301 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [Connector[HTTP/1.1-8080]] to [STARTING]
+2025-03-08 23:59:59,301 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-03-08 23:59:59,324 DEBUG o.a.j.l.DirectJDKLog [main] Setting state for [Connector[HTTP/1.1-8080]] to [STARTED]
+2025-03-08 23:59:59,324 DEBUG o.a.j.l.DirectJDKLog [http-nio-8080-Acceptor] Counting up[http-nio-8080-Acceptor] latch=0
+2025-03-08 23:59:59,336 INFO o.s.b.StartupInfoLogger [main] Started pokemonTcgExchangesSpringBootApplication in 5.728 seconds (JVM running for 6.633)
+2025-03-08 23:59:59,543 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,544 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,544 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,544 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  1, name=org.springframework.boot:type=Admin,name=SpringApplication, attribute=Ready
+2025-03-08 23:59:59,548 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(1)-127.0.0.1] RMI TCP Connection(1)-127.0.0.1: (port 59987) op = 82
+2025-03-08 23:59:59,549 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(1)-127.0.0.1] RMI TCP Connection(1)-127.0.0.1: (port 59987) op = 80
+2025-03-08 23:59:59,550 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(1)-127.0.0.1] RMI TCP Connection(1)-127.0.0.1: (port 59987) op = 84
+2025-03-08 23:59:59,550 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,550 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,551 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,552 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,552 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,552 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,553 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,553 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,553 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,553 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(3)-127.0.0.1] RMI TCP Connection(3)-127.0.0.1: accepted socket from [127.0.0.1:60019]
+2025-03-08 23:59:59,553 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,554 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(3)-127.0.0.1] RMI TCP Connection(3)-127.0.0.1: (port 59987) op = 80
+2025-03-08 23:59:59,554 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(4)-127.0.0.1] RMI TCP Connection(4)-127.0.0.1: accepted socket from [127.0.0.1:60020]
+2025-03-08 23:59:59,554 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,554 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(3)-127.0.0.1] RMI TCP Connection(3)-127.0.0.1: (port 59987) op = 84
+2025-03-08 23:59:59,554 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 84
+2025-03-08 23:59:59,554 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(4)-127.0.0.1] RMI TCP Connection(4)-127.0.0.1: (port 59987) op = 80
+2025-03-08 23:59:59,555 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,555 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,556 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(4)-127.0.0.1] RMI TCP Connection(4)-127.0.0.1: (port 59987) op = 84
+2025-03-08 23:59:59,556 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,556 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(5)-127.0.0.1] RMI TCP Connection(5)-127.0.0.1: accepted socket from [127.0.0.1:60021]
+2025-03-08 23:59:59,556 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,556 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(5)-127.0.0.1] RMI TCP Connection(5)-127.0.0.1: (port 59987) op = 80
+2025-03-08 23:59:59,556 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,557 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(5)-127.0.0.1] RMI TCP Connection(5)-127.0.0.1: (port 59987) op = 84
+2025-03-08 23:59:59,558 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,558 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,558 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  2 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,558 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: accepted socket from [127.0.0.1:60022]
+2025-03-08 23:59:59,559 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,559 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(2)-127.0.0.1] RMI TCP Connection(2)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,560 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,561 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,561 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: accepted socket from [127.0.0.1:60023]
+2025-03-08 23:59:59,561 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,561 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,561 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,561 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,562 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,562 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,562 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,562 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 84
+2025-03-08 23:59:59,562 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,563 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,563 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,563 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,563 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,563 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,563 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,563 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,564 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,564 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,564 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,564 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: accepted socket from [127.0.0.1:60024]
+2025-03-08 23:59:59,564 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,564 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  3 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,564 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: (port 59993) op = 84
+2025-03-08 23:59:59,564 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,564 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,564 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,565 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,565 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,565 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,566 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,566 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  3, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,566 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(2)-127.0.0.1] connectionId=rmi://127.0.0.1  2, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,566 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: name = "[Ljava.rmi.server.ObjID;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,566 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,566 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,566 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: name = "java.rmi.server.ObjID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,566 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(7)-127.0.0.1] connectionId=rmi://127.0.0.1  4 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,566 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,566 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: name = "java.rmi.server.UID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,566 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,566 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: name = "java.rmi.dgc.Lease", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,567 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(7)-127.0.0.1] connectionId=rmi://127.0.0.1  4, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,567 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] [javax.management.remote.rmi.RMIConnectionImpl@59b72f43: connectionId=rmi://127.0.0.1  3] closing.
+2025-03-08 23:59:59,567 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: name = "java.rmi.dgc.VMID", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,567 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(7)-127.0.0.1] RMI TCP Connection(7)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,567 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: name = "[B", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,567 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(7)-127.0.0.1] [javax.management.remote.rmi.RMIConnectionImpl@16d8e519: connectionId=rmi://127.0.0.1  4] closing.
+2025-03-08 23:59:59,567 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(7)-127.0.0.1] [javax.management.remote.rmi.RMIConnectionImpl@16d8e519: connectionId=rmi://127.0.0.1  4] closed.
+2025-03-08 23:59:59,567 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] [javax.management.remote.rmi.RMIConnectionImpl@59b72f43: connectionId=rmi://127.0.0.1  3] closed.
+2025-03-08 23:59:59,567 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(8)-127.0.0.1] RMI TCP Connection(8)-127.0.0.1: (port 59993) op = 84
+2025-03-08 23:59:59,567 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,568 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,569 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,570 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,570 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,570 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,570 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,571 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,571 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,669 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,669 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,669 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,669 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,669 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,669 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,669 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  2 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,670 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,670 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  2, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,672 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,672 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,673 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,673 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,673 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,673 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,673 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,673 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,673 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,771 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,772 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,772 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,772 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,773 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,773 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,773 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  2 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,773 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,773 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  2, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,775 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,775 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,776 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,776 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,776 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,776 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,777 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,777 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,875 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,875 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,876 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,876 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,876 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,877 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,877 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  2 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,877 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,877 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  2, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,879 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,879 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,879 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,879 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,880 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,880 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,880 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,880 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,880 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,979 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,979 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,980 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,980 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,980 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,980 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,980 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  2 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,981 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,981 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  2, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]
+2025-03-08 23:59:59,982 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 82
+2025-03-08 23:59:59,982 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: (port 59993) op = 80
+2025-03-08 23:59:59,982 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2025-03-08 23:59:59,983 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "java.rmi.MarshalledObject", codebase = ""
+2025-03-08 23:59:59,983 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[B", codebase = ""
+2025-03-08 23:59:59,983 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = ""
+2025-03-08 23:59:59,983 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5 unwrapping params with MBean extended ClassLoader.
+2025-03-08 23:59:59,983 DEBUG s.r.r.Log$LoggerLog [RMI TCP Connection(6)-127.0.0.1] RMI TCP Connection(6)-127.0.0.1: name = "[Ljava.lang.String;", codebase = "", defaultLoader = jdk.internal.loader.ClassLoaders$PlatformClassLoader@52fe2a15
+2025-03-08 23:59:59,983 DEBUG s.u.l.i.LoggingProviderImpl$JULWrapper [RMI TCP Connection(6)-127.0.0.1] connectionId=rmi://127.0.0.1  5, name=org.springframework.boot:type=Admin,name=SpringApplication, operationName=getProperty, signature=[java.lang.String]

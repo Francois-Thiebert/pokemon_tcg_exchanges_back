@@ -94,6 +94,11 @@ public class UserRestController {
         boolean exists = userSrv.checkLoginExists(login);
         return ResponseEntity.ok(exists);
     }
+	
+	@GetMapping("/activityCheck")
+    public void checkActivity() {
+        userSrv.checkActiveUsers();
+    }
 
 	@PostMapping({ "", "/inscription" })
 	@JsonView(JsonViews.User.class)

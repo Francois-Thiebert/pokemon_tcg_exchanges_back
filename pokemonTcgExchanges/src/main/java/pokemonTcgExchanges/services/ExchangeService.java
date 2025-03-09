@@ -233,7 +233,7 @@ public class ExchangeService {
 						if (g != userID) {
 							User giver = userSrv.getById(g);
 							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
+							if(!wishedCardsGiver.isEmpty() && giver.getIsVisible()) {
 								Boolean isCompatible = false;
 								for(Card wishedGiver: wishedCardsGiver) {
 									if(wishedGiver.getRarity()==0 && !isCompatible) {
@@ -265,7 +265,7 @@ public class ExchangeService {
 						if (g != userID) {
 							User giver = userSrv.getById(g);
 							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
+							if(!wishedCardsGiver.isEmpty() && giver.getIsVisible()) {
 								Boolean isCompatible = false;
 								for(Card wishedGiver: wishedCardsGiver) {
 									if(wishedGiver.getRarity()==1 && !isCompatible) {
@@ -297,7 +297,7 @@ public class ExchangeService {
 						if (g != userID) {
 							User giver = userSrv.getById(g);
 							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
+							if(!wishedCardsGiver.isEmpty() && giver.getIsVisible()) {
 								Boolean isCompatible = false;
 								for(Card wishedGiver: wishedCardsGiver) {
 									if(wishedGiver.getRarity()==2 && !isCompatible) {
@@ -329,7 +329,7 @@ public class ExchangeService {
 						if (g != userID) {
 							User giver = userSrv.getById(g);
 							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
+							if(!wishedCardsGiver.isEmpty() && giver.getIsVisible()) {
 								Boolean isCompatible = false;
 								for(Card wishedGiver: wishedCardsGiver) {
 									if(wishedGiver.getRarity()==3 && !isCompatible) {
@@ -361,7 +361,7 @@ public class ExchangeService {
 						if (g != userID) {
 							User giver = userSrv.getById(g);
 							Set<Card> wishedCardsGiver = giver.getWishList();
-							if(!wishedCardsGiver.isEmpty()) {
+							if(!wishedCardsGiver.isEmpty() && giver.getIsVisible()) {
 								Boolean isCompatible = false;
 								for(Card wishedGiver: wishedCardsGiver) {
 									if(wishedGiver.getRarity()==4 && !isCompatible) {
