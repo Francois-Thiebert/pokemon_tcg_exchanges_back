@@ -1,5 +1,6 @@
 package pokemonTcgExchanges.services;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -120,6 +121,8 @@ public class UserService {
 			userEnBase.setFriendCode(user.getFriendCode());
 			userEnBase.setToGiveList(user.getToGiveList());
 			userEnBase.setWishList(user.getWishList());
+			userEnBase.setIsVisible(user.getIsVisible());
+			userEnBase.setLastLogging(user.getLastLogging());
 			return userRepo.save(userEnBase);
 		} else {
 			throw new UserException();
@@ -146,6 +149,17 @@ public class UserService {
 		return userRepo.findByLogin(login).orElseThrow(() -> {
 			throw new UserException();
 		});
+	}
+	
+	public void checkActiveUsers() {
+		LocalDateTime now = LocalDateTime.now();
+		LocalDateTime limitDate = now.minusHours(24);
+		List<User> inactiveUsers = new ArrayList<>();
+		inactiveUsers = userRepo.findInactiveUsers(limitDate);
+		for(User u: inactiveUsers) {
+			u.setIsVisible(false);
+			userRepo.save(u);
+		}
 	}
 
 }

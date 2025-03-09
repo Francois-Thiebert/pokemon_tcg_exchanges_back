@@ -1,5 +1,6 @@
 package pokemonTcgExchanges.repositories;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,9 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	
 	@Query("SELECT u FROM User u JOIN u.toGiveList c WHERE c.id = :idCard")
 	List<User> findGiverByCard(@Param("idCard") Long idCard);
+	
+	@Query("SELECT u FROM User u WHERE u.lastLogging < :limitDate AND u.isVisible = true")
+	List<User> findInactiveUsers(@Param("limitDate") LocalDateTime limitDate);
 
 	
 //	@Query("SELECT u FROM Card c JOIN c.giver u WHERE c.id = :idCard")

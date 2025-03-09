@@ -1,5 +1,6 @@
 package pokemonTcgExchanges.entities;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
@@ -69,13 +70,20 @@ public class User implements UserDetails {
 	)
 	@JsonView(JsonViews.UserWithAll.class)
 	private Set<Card> toGiveList;
+	@Column(name = "last_logging", nullable = true)
+	@JsonView(JsonViews.Simple.class)
+	private LocalDateTime lastLogging;
+	@Column(name = "is_visible", nullable = true)
+	@JsonView(JsonViews.Simple.class)
+	private Boolean isVisible;
 
 	public User() {
 		super();
 	}
 
 	public User(Long id, Role role, String login, String password, String friendCode, Set<Exchange> exchanges1,
-			Set<Exchange> exchanges2, Set<Card> wishList, Set<Card> toGiveList) {
+			Set<Exchange> exchanges2, Set<Card> wishList, Set<Card> toGiveList, LocalDateTime lastLogging,
+			Boolean isVisible) {
 		super();
 		this.id = id;
 		this.role = role;
@@ -86,6 +94,24 @@ public class User implements UserDetails {
 		this.exchanges2 = exchanges2;
 		this.wishList = wishList;
 		this.toGiveList = toGiveList;
+		this.lastLogging = lastLogging;
+		this.isVisible = isVisible;
+	}
+
+	public LocalDateTime getLastLogging() {
+		return lastLogging;
+	}
+
+	public void setLastLogging(LocalDateTime lastLogging) {
+		this.lastLogging = lastLogging;
+	}
+
+	public Boolean getIsVisible() {
+		return isVisible;
+	}
+
+	public void setIsVisible(Boolean isVisible) {
+		this.isVisible = isVisible;
 	}
 
 	public Long getId() {
