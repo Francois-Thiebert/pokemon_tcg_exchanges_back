@@ -48,7 +48,7 @@ public class Card {
 	@JsonView(JsonViews.Simple.class)
 	private String rarity_string;
 	@Column(name = "picture")
-	@JsonView(JsonViews.Card.class)
+	@JsonView({JsonViews.Card.class,JsonViews.Exchange.class})
 	private String picture;
 	@ManyToMany(mappedBy = "wishList")
 	@JsonView(JsonViews.Card.class)

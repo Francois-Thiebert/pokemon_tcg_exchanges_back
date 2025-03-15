@@ -99,6 +99,25 @@ public class UserRestController {
     public void checkActivity() {
         userSrv.checkActiveUsers();
     }
+	
+	@GetMapping("/isBlocked/{id}")
+	@JsonView(JsonViews.Simple.class)
+	public boolean isBlockedUser(@PathVariable Long id) {
+		return userSrv.IsBlockedUser(id);
+	}
+	
+	@GetMapping("/hasAskedUnblocking/{id}")
+	@JsonView(JsonViews.Simple.class)
+	public boolean hasAskedUnblocking(@PathVariable Long id) {
+		User user = getById(id);
+		return userSrv.hasAskedUnblocking(user);
+	}
+	
+	@GetMapping("/askUnblocking/{id}")
+	public void askUnblocking(@PathVariable Long id) {
+		User user = getById(id);
+		userSrv.askUnblocking(user);
+	}
 
 	@PostMapping({ "", "/inscription" })
 	@JsonView(JsonViews.User.class)
