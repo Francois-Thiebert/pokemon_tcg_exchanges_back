@@ -34,7 +34,7 @@ public class AuthentificationRestController {
 	public User authentification(@AuthenticationPrincipal User user) {
 		LOGGER.info("connexion, "+user.getLogin());
 		user.setLastLogging(LocalDateTime.now());
-		user.setIsVisible(true);
+		userSrv.setUserVisibility(user);
 		userSrv.update(user);
 		return user;
 	}

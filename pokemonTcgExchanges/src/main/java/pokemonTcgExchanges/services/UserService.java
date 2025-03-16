@@ -14,11 +14,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import pokemonTcgExchanges.entities.Blocking;
 import pokemonTcgExchanges.entities.Card;
 import pokemonTcgExchanges.entities.Exchange;
 import pokemonTcgExchanges.entities.Role;
 import pokemonTcgExchanges.entities.User;
 import pokemonTcgExchanges.exceptions.UserException;
+import pokemonTcgExchanges.repositories.BlockingRepository;
 import pokemonTcgExchanges.repositories.ExchangeRepository;
 import pokemonTcgExchanges.repositories.UserRepository;
 
@@ -31,6 +33,8 @@ public class UserService {
 	private UserRepository userRepo;
 	@Autowired
 	private ExchangeRepository exchangeRepo;
+	@Autowired
+	private BlockingRepository blockingRepo;
 	@Autowired
 	private ExchangeService exchangeSrv;
 	@Autowired
@@ -153,13 +157,64 @@ public class UserService {
 	
 	public void checkActiveUsers() {
 		LocalDateTime now = LocalDateTime.now();
-		LocalDateTime limitDate = now.minusHours(24);
+		LocalDateTime limitDate = now.minusHours(48);
 		List<User> inactiveUsers = new ArrayList<>();
 		inactiveUsers = userRepo.findInactiveUsers(limitDate);
 		for(User u: inactiveUsers) {
 			u.setIsVisible(false);
 			userRepo.save(u);
 		}
+	}
+	
+	public boolean IsBlockedUser(Long userID) {
+		Long blockingID = blockingRepo.findBlockedIDByUserID(userID);
+		if(blockingID != null) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public void setUserVisibility(User user){
+		if(!IsBlockedUser(user.getId())) {
+			user.setIsVisible(true);
+		}
+	}
+	
+	public void blockingManagment(User user){
+		Blocking blocking = blockingRepo.findBlockingByUserID(user.getId());
+		if(blocking != null) {
+			blocking.setReports((short) (blocking.getReports()+1));
+			if(blocking.getReports() % 5 == 0) {
+				blocking.setIsBlocked(true);
+				blocking.setAskedUnblocking(false);
+			}
+		}else {
+			blocking = new Blocking();
+			blocking.setReports((short) 1);
+			blocking.setUser(user);
+			blocking.setIsBlocked(false);
+		}
+		blockingRepo.save(blocking);
+	}
+	
+	public boolean hasAskedUnblocking(User user) {
+		Blocking blocking = blockingRepo.findBlockingByUserID(user.getId());
+		if(blocking != null && blocking.getAskedUnblocking() == true) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public void askUnblocking(User user) {
+		Blocking blocking = blockingRepo.findBlockingByUserID(user.getId());
+		if(blocking != null && blocking.getAskedUnblocking() == false) {
+			blocking.setAskedUnblocking(true);
+			blockingRepo.save(blocking);
+		}
+		
+		
 	}
 
 }

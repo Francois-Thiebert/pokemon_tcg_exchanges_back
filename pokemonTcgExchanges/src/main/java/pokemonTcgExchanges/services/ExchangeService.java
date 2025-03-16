@@ -177,6 +177,9 @@ public class ExchangeService {
 			if(cancel.getCause() == Cause.NotToGive) {
 				give_cards_user1.remove(card2);
 			}
+			if(cancel.getCause() == Cause.UserNotTrust) {
+				userSrv.blockingManagment(user2);
+			}
 		}
 		if(userId == user2.getId()) {
 			if(cancel.getCause() == Cause.NotSearched) {
@@ -184,6 +187,9 @@ public class ExchangeService {
 			}
 			if(cancel.getCause() == Cause.NotToGive) {
 				give_cards_user2.remove(card1);
+			}
+			if(cancel.getCause() == Cause.UserNotTrust) {
+				userSrv.blockingManagment(user1);
 			}
 		}
 		userSrv.update(user1);
