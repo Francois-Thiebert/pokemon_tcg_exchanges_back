@@ -15,7 +15,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import pokemonTcgExchanges.entities.Blocking;
-import pokemonTcgExchanges.entities.Card;
 import pokemonTcgExchanges.entities.Exchange;
 import pokemonTcgExchanges.entities.Role;
 import pokemonTcgExchanges.entities.User;
@@ -106,6 +105,7 @@ public class UserService {
 		if (violations.isEmpty()) {
 			user.setPassword(passwordEncoder.encode(user.getPassword()));
 			user.setRole(Role.ROLE_USER);
+			user.setIsVisible(true);
 			return userRepo.save(user);
 		} else {
 			throw new UserException();
@@ -213,8 +213,14 @@ public class UserService {
 			blocking.setAskedUnblocking(true);
 			blockingRepo.save(blocking);
 		}
-		
-		
+	}
+	
+	public Long countUsers() {
+		return userRepo.count();
+	}
+	
+	public Long countActiveUsers() {
+		return userRepo.countActiveUsers();
 	}
 
 }
