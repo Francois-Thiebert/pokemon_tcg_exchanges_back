@@ -73,14 +73,14 @@ public class CardRestController {
 		return givedcard;
 	}
 	
-	@GetMapping("/giver/{id}")
+	@GetMapping("/adm/giver/{id}")
 	@JsonView(JsonViews.Card.class)
 	public Long getGiverByCard(@PathVariable Long id) {
 	    Long giverId = cardSrv.getGiverByCard(id);
 	    return giverId;
 	}
 	
-	@GetMapping("/givers/{id}")
+	@GetMapping("/adm/givers/{id}")
 	@JsonView(JsonViews.Card.class)
 	public List<Long> getGiversByCard(@PathVariable Long id) {
 		List<Long> giversIds = cardSrv.getGiversIdsByCard(id);
@@ -108,7 +108,7 @@ public class CardRestController {
 		return cards;
 	}
 	
-	@GetMapping("/wished/user/{Userid}/rarity/{rarity}")
+	@GetMapping("/adm/wished/user/{Userid}/rarity/{rarity}")
 	@JsonView(JsonViews.Card.class)
 	public List<Card> getByxWishedByRarity(@PathVariable Long Userid, Integer rarity) {
 		List<Card> cards = null;
@@ -116,7 +116,7 @@ public class CardRestController {
 		return cards;
 	}
 	
-	@GetMapping("/topwished/user/{Userid}")
+	@GetMapping("/adm/topwished/user/{Userid}")
 	@JsonView(JsonViews.Simple.class)
 	public List<Card> getTopWishedByUser(@PathVariable Long Userid) {
 		List<Card> cards = null;

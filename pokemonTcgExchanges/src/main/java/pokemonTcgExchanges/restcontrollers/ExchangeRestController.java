@@ -78,7 +78,7 @@ public class ExchangeRestController {
 		return exchanges;
 	}
 	
-	@GetMapping("/cancel_history/{idUserA}/{idUserB}/{idCardA}/{idCardB}")
+	@GetMapping("/adm/cancel_history/{idUserA}/{idUserB}/{idCardA}/{idCardB}")
 	@JsonView(JsonViews.Simple.class)
 	public Boolean getCancelHistory(@PathVariable Long idUserA, @PathVariable Long idUserB, @PathVariable Long idCardA, @PathVariable Long idCardB) {
 		return exchangeSrv.isCancelHistory(idCardA, idCardB, idUserA, idUserB);

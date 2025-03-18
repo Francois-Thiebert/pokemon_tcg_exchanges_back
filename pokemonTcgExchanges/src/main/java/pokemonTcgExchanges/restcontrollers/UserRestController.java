@@ -34,7 +34,7 @@ public class UserRestController {
 	@Autowired
 	private UserService userSrv;
 
-	@GetMapping("")
+	@GetMapping("/adm/all")
 	@JsonView(JsonViews.User.class)
 	public List<User> getAll() {
 		return userSrv.getAll();
@@ -56,7 +56,7 @@ public class UserRestController {
 		return user;
 	}
 	
-	@GetMapping("/giverCard/{id}")
+	@GetMapping("adm//giverCard/{id}")
 	@JsonView(JsonViews.UserWithAll.class)
 	public List<User> getUserByGiveCard(@PathVariable Long Cardid) {
 		List<User> users = null;
@@ -117,6 +117,15 @@ public class UserRestController {
 	public void askUnblocking(@PathVariable Long id) {
 		User user = getById(id);
 		userSrv.askUnblocking(user);
+	}
+	
+	@GetMapping("/adm/number")
+	public Long userNumber() {
+		return userSrv.countUsers();
+	}
+	@GetMapping("/adm/numberActive")
+	public Long activeUserNumber() {
+		return userSrv.countActiveUsers();
 	}
 
 	@PostMapping({ "", "/inscription" })

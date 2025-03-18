@@ -23,10 +23,8 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	
 	@Query("SELECT u FROM User u WHERE u.lastLogging < :limitDate AND u.isVisible = true")
 	List<User> findInactiveUsers(@Param("limitDate") LocalDateTime limitDate);
-
 	
-//	@Query("SELECT u FROM Card c JOIN c.giver u WHERE c.id = :idCard")
-//	List<User> findGiverByCard(@Param("idCard") Long idCard);
-	
+	@Query("SELECT COUNT(u) FROM User u WHERE u.isVisible = true")
+	Long countActiveUsers();
 
 }
