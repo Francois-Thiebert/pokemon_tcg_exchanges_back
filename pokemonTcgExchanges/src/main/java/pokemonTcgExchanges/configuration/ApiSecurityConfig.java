@@ -48,7 +48,7 @@ public class ApiSecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://176.159.136.78:9000","http://176.159.136.78:4200","http://localhost:4200"));
+        configuration.setAllowedOrigins(List.of("http://176.159.136.78:9000","http://echanges-pokemon-tcg.duckdns.org:9000","http://localhost:4200"));
         configuration.addAllowedMethod("*"); // Allow all HTTP methods
         configuration.addAllowedHeader("*"); // Allow all headers
         configuration.setAllowCredentials(true);

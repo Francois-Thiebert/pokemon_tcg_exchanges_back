@@ -157,7 +157,7 @@ public class UserService {
 	
 	public void checkActiveUsers() {
 		LocalDateTime now = LocalDateTime.now();
-		LocalDateTime limitDate = now.minusHours(48);
+		LocalDateTime limitDate = now.minusHours(72);
 		List<User> inactiveUsers = new ArrayList<>();
 		inactiveUsers = userRepo.findInactiveUsers(limitDate);
 		for(User u: inactiveUsers) {
