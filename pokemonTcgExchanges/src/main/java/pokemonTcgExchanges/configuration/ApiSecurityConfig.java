@@ -30,11 +30,12 @@ public class ApiSecurityConfig {
                 .antMatchers(HttpMethod.OPTIONS, "/api/**").permitAll()
 
                 .antMatchers(HttpMethod.GET, "/api/user/login/check/*").permitAll()
-                .antMatchers(HttpMethod.GET, "/api/**/adm/**").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/api/*/adm/**").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/api/user/activityCheck").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/api/user/{id}").authenticated()
+                .antMatchers(HttpMethod.GET, "/api/user/all/{id}").authenticated()
+                .antMatchers(HttpMethod.GET, "/api/user/hasAskedUnblocking/{id}").authenticated()
                 .antMatchers(HttpMethod.GET, "/api/user").hasAnyRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "/api/user/**").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/api/auth").permitAll()
                 .antMatchers(HttpMethod.GET).authenticated()
                 
