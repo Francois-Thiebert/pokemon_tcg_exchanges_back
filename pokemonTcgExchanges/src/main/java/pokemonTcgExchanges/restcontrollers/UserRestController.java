@@ -56,7 +56,7 @@ public class UserRestController {
 		return user;
 	}
 	
-	@GetMapping("adm//giverCard/{id}")
+	@GetMapping("adm/giverCard/{id}")
 	@JsonView(JsonViews.UserWithAll.class)
 	public List<User> getUserByGiveCard(@PathVariable Long Cardid) {
 		List<User> users = null;
@@ -126,6 +126,10 @@ public class UserRestController {
 	@GetMapping("/adm/numberActive")
 	public Long activeUserNumber() {
 		return userSrv.countActiveUsers();
+	}
+	@GetMapping("/adm/numberBlocked")
+	public Long blockedUserNumber() {
+		return userSrv.countBlockedUsers();
 	}
 
 	@PostMapping({ "", "/inscription" })

@@ -222,5 +222,9 @@ public class UserService {
 	public Long countActiveUsers() {
 		return userRepo.countActiveUsers();
 	}
+	
+	public Long countBlockedUsers() {
+		return userRepo.countBlockedUsers();
+	}
 
 }

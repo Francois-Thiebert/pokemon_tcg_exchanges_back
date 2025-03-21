@@ -84,6 +84,15 @@ public class ExchangeRestController {
 		return exchangeSrv.isCancelHistory(idCardA, idCardB, idUserA, idUserB);
 	}
 	
+	@GetMapping("/adm/numberCurrent")
+	public Long currentExchangeNumber() {
+		return exchangeSrv.countCurrentExchange();
+	}
+	@GetMapping("/adm/numberFinished")
+	public Long finishedExchangeNumber() {
+		return exchangeSrv.countFinishedExchange();
+	}
+	
 //	@GetMapping("/new/givers/{id}")
 //	@JsonView(JsonViews.Simple.class)
 //	public List<User> getNewGivers(@PathVariable Long id) {

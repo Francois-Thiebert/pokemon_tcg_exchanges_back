@@ -450,5 +450,12 @@ public class ExchangeService {
 		      return false; 
 		}
 	}
+	
+	public Long countCurrentExchange() {
+		return exchangeRepo.countCurrentExchange();
+	}
+	public Long countFinishedExchange() {
+		return exchangeRepo.countFinishedExchange();
+	}
 
 }
