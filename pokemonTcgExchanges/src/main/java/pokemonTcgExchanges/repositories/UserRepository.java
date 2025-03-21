@@ -26,5 +26,8 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	
 	@Query("SELECT COUNT(u) FROM User u WHERE u.isVisible = true")
 	Long countActiveUsers();
+	
+	@Query("SELECT COUNT(b) FROM Blocking b WHERE b.isBlocked = true")
+	Long countBlockedUsers();
 
 }
