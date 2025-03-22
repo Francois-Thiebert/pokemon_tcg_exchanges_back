@@ -120,8 +120,6 @@ public class UserService {
 			userEnBase.setExchanges1(user.getExchanges1());
 			userEnBase.setExchanges2(user.getExchanges2());
 			userEnBase.setLogin(user.getLogin());
-			userEnBase.setExchanges1(user.getExchanges1());
-			userEnBase.setExchanges2(user.getExchanges2());
 			userEnBase.setFriendCode(user.getFriendCode());
 			userEnBase.setToGiveList(user.getToGiveList());
 			userEnBase.setWishList(user.getWishList());
