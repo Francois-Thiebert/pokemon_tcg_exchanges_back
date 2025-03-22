@@ -39,7 +39,7 @@ public class ExchangeRestController {
 	@Autowired
 	private CardService cardSrv;
 
-	@GetMapping("")
+	@GetMapping("adm/all")
 	@JsonView(JsonViews.Simple.class)
 	public List<Exchange> getAll() {
 		return exchangeSrv.getAll();
