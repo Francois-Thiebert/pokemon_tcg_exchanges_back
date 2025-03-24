@@ -38,5 +38,11 @@ public class AuthentificationRestController {
 		userSrv.update(user);
 		return user;
 	}
+	
+	@GetMapping("/trace")
+	@JsonView(JsonViews.User.class)
+	public void trace() {
+		LOGGER.info("home page visit");
+	}
 
 }

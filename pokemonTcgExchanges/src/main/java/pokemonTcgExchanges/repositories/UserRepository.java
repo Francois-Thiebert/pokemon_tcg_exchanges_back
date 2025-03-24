@@ -29,5 +29,11 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	
 	@Query("SELECT COUNT(b) FROM Blocking b WHERE b.isBlocked = true")
 	Long countBlockedUsers();
+	
+//	@Query("SELECT COUNT(c) FROM User u JOIN u.wishList c WHERE u.id = :userId ")
+//	Long countWishedCardsByUser(@Param("userId") Long userId);
+//	
+//	@Query("SELECT COUNT(c) FROM User u JOIN u.toGiveList c WHERE u.id = :idUser")
+//	Integer countToGiveCardsByUser(@Param("idUser") Long idUser);
 
 }

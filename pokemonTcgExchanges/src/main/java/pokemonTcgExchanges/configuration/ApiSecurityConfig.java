@@ -30,6 +30,7 @@ public class ApiSecurityConfig {
                 .antMatchers(HttpMethod.OPTIONS, "/api/**").permitAll()
 
                 .antMatchers(HttpMethod.GET, "/api/user/login/check/*").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/auth/trace").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/*/adm/**").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/api/user/activityCheck").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/api/user/{id}").authenticated()

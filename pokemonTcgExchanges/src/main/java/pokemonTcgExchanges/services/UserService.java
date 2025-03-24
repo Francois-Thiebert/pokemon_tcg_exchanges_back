@@ -224,5 +224,13 @@ public class UserService {
 	public Long countBlockedUsers() {
 		return userRepo.countBlockedUsers();
 	}
+	
+//	public Long countWishedCardsByUser(Long userID) {
+//		return userRepo.countWishedCardsByUser(userID);
+//	}
+//	
+//	public int countToGiveCardsByUser(Long userID) {
+//		return userRepo.countToGiveCardsByUser(userID);
+//	}
 
 }

@@ -131,6 +131,14 @@ public class UserRestController {
 	public Long blockedUserNumber() {
 		return userSrv.countBlockedUsers();
 	}
+//	@GetMapping("/NumberWishedCards/{userID}")
+//	public Long countWishedCards(@PathVariable Long id) {
+//		return userSrv.countWishedCardsByUser(id);
+//	}
+//	@GetMapping("/NumberToGiveCards/{userID}")
+//	public int countToGiveCards(@PathVariable Long id) {
+//		return userSrv.countToGiveCardsByUser(id);
+//	}
 
 	@PostMapping({ "", "/inscription" })
 	@JsonView(JsonViews.User.class)
