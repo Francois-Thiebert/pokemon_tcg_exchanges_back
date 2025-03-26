@@ -1,32 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <property name="LOGS" value="./logs" />
 
-    <!-- Appender Console -->
-    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <Pattern>
-                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg - IP: %X{ipAddress} ${HOSTNAME}%n
-            </Pattern>
-        </layout>
-    </appender>
+	<property name="LOGS" value="./logs" />
 
-    <!-- Appender RollingFile -->
-    <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOGS}/spring-boot-logger.log</file>
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>%d{yyyy-MM-dd HH:mm:ss}  - IP: %X{ipAddress} ${HOSTNAME} - [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
+	<!-- Appender Console -->
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				%black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)]
+				%yellow(%C{1}): %msg%n%throwable
+			</Pattern>
+		</layout>
+	</appender>
 
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOGS}/archived/spring-boot-logger-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>10MB</maxFileSize>
-            </timeBasedFileNamingAndTriggeringPolicy>
-        </rollingPolicy>
-    </appender>
+	<!-- Appender RollingFile -->
+	<!--
+	<appender name="RollingFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGS}/spring-boot-logger.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss}, %msg%n</pattern>
+		</encoder>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>
+				${LOGS}/archived/spring-boot-logger-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+	-->
 
-    <root level="INFO">
-        <appender-ref ref="RollingFile" />
-        <appender-ref ref="Console" />
-    </root>
-</configuration>
+	<!--
+	<logger name="org.springframework" level="OFF" />
+	<logger name="org.springframework.boot" level="OFF" />
+	<logger name="org.springframework.web" level="OFF" />
+	<logger name="org.hibernate" level="OFF" />
+	<logger name="o.a.j.l.DirectJDKLog" level="OFF" />
+	<logger name="com.zaxxer.hikari.HikariDataSource" level="OFF" />
+	<logger name="org.apache.catalina" level="OFF" />
+	<logger name="org.apache.coyote" level="OFF" />
+	<logger name="org.apache.tomcat" level="OFF" />
+	<logger name="org.apache.jasper" level="OFF" />
+	-->
+
+
+	<!-- Logger spécifique pour AuthentificationRestController -->
+	<logger name="com.exemple.AuthentificationRestController" level="INFO">
+		<!-- <appender-ref ref="RollingFile" /> -->
+		<appender-ref ref="Console" />
+	</logger>
+
+	<!-- Root logger -->
+	<root level="INFO">
+		<!-- <appender-ref ref="RollingFile" /> -->
+		<appender-ref ref="Console" />
+	</root>
+	</configuration>
