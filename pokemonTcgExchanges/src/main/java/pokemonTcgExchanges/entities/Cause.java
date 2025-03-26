@@ -2,6 +2,6 @@ package pokemonTcgExchanges.entities;
 
 public enum Cause {
 	
-	UserToManyExchanges, UserNotTrust, NotToGive, NotSearched, Other;
+	UserToManyExchanges, UserNotTrust, NotToGive, NotSearched, Other, ToManyExchanges, TokenLake;
 
 }

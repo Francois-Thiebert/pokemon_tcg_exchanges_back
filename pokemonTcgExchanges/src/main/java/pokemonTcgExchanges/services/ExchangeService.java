@@ -50,16 +50,23 @@ public class ExchangeService {
 		Set<Card> wishUser2 = user2.getWishList();
 		Set<Card> giveUser1 = user1.getToGiveList();
 		Set<Card> giveUser2 = user2.getToGiveList();
+		Long numberExchangesUser2 = exchangeRepo.countCurrentExchangeByUser(user2.getId());
+		Long numberExchangesUser1 = exchangeRepo.countCurrentExchangeByUser(user1.getId());
 		wishUser1.remove(card1);
 		user1.setWishList(wishUser1);
 		giveUser1.remove(card2);
-		System.out.println(card1.getName()+" retiré de la wishlist de "+ user1.getLogin());
 		user1.setToGiveList(giveUser1);
+		if(numberExchangesUser1 > 5) {
+			user1.setIsVisible(false);
+		}
 	    userSrv.update(user1);
 	    wishUser2.remove(card2);
 		user2.setWishList(wishUser2);
 		giveUser2.remove(card1);
 		user2.setToGiveList(giveUser2);
+		if(numberExchangesUser2 > 5) {
+			user2.setIsVisible(false);
+		}
 	    userSrv.update(user2);
 	    exchange.setState(State.ASKED);
 	    exchange.setDate(LocalDateTime.now());
@@ -118,6 +125,10 @@ public class ExchangeService {
 		exchanges = exchangeRepo.findExchangesByUserIds(idUser1, idUser2);
 		return exchanges;
 	}
+	
+	public Long getCurrentExchangeNumberByUser(User user) {
+		return exchangeRepo.countCurrentExchangeByUser(user.getId());
+	}
 
 	public Exchange update(Exchange exchange) {
 		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
@@ -143,6 +154,11 @@ public class ExchangeService {
 	public void deleteById(Long Id) {
 		Exchange exchangeEnBase = exchangeRepo.findById(Id).orElseThrow(ExchangeException::new);
 		exchangeRepo.delete(exchangeEnBase);
+	}
+	
+	public CanceldExchange getCancelByExchangeId(Long exchangeID) {
+		Exchange exchange = getById(exchangeID);
+		return cancelRepo.findCancelByExchange(exchange);
 	}
 	
 	public void cancelExchange (Exchange exchange, Long userId, Cause cause) {

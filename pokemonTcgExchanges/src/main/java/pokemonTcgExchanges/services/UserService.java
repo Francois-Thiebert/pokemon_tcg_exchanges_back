@@ -130,6 +130,11 @@ public class UserService {
 			throw new UserException();
 		}
 	}
+	
+	public void connectionSinceUpdate(User user) {
+		user.setConnectedSinceUpdate(true);
+		userRepo.save(user);
+	}
 
 	public void deleteByUser(User user) {
 		User userEnBase = userRepo.findById(user.getId()).orElseThrow(UserException::new);
@@ -174,7 +179,8 @@ public class UserService {
 	}
 	
 	public void setUserVisibility(User user){
-		if(!IsBlockedUser(user.getId())) {
+		Long exchangeNumber = exchangeSrv.getCurrentExchangeNumberByUser(user);
+		if(!IsBlockedUser(user.getId()) && exchangeNumber < 7) {
 			user.setIsVisible(true);
 		}
 	}

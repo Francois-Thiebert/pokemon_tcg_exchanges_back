@@ -118,6 +118,11 @@ public class UserRestController {
 		User user = getById(id);
 		userSrv.askUnblocking(user);
 	}
+	@GetMapping("/connectionSinceUpdate/{id}")
+	public void connectionSinceUpdate(@PathVariable Long id) {
+		User user = getById(id);
+		userSrv.connectionSinceUpdate(user);
+	}
 	
 	@GetMapping("/adm/number")
 	public Long userNumber() {
@@ -131,6 +136,7 @@ public class UserRestController {
 	public Long blockedUserNumber() {
 		return userSrv.countBlockedUsers();
 	}
+	
 //	@GetMapping("/NumberWishedCards/{userID}")
 //	public Long countWishedCards(@PathVariable Long id) {
 //		return userSrv.countWishedCardsByUser(id);

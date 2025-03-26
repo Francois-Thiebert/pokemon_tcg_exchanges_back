@@ -36,6 +36,9 @@ public interface ExchangeRepository extends JpaRepository<Exchange, Long> {
 	@Query("SELECT e FROM Exchange e WHERE e.user2 = :idUser")
 	List<Exchange> findExchangesUser2ByUserID(@Param("idUser") Long idUser);
 	
+	@Query("SELECT COUNT(e) FROM Exchange e WHERE (e.state = 0 OR e.state = 1) AND (e.user1.id = :idUser OR e.user2.id = :idUser)")
+	Long countCurrentExchangeByUser(@Param("idUser") Long idUser);
+	
 	@Query("SELECT COUNT(e) FROM Exchange e WHERE e.state = 0 OR e.state = 1")
 	Long countCurrentExchange();
 

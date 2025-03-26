@@ -21,4 +21,8 @@ public class JsonViews {
 		public static class Card extends Simple {
 	
 		}
+		
+		public static class CanceldExchange extends Simple {
+			
+		}
 }

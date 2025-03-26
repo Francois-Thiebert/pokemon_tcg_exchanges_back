@@ -21,6 +21,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
+import pokemonTcgExchanges.entities.CanceldExchange;
 import pokemonTcgExchanges.entities.Card;
 import pokemonTcgExchanges.entities.Cause;
 import pokemonTcgExchanges.entities.Exchange;
@@ -91,6 +92,12 @@ public class ExchangeRestController {
 	@GetMapping("/adm/numberFinished")
 	public Long finishedExchangeNumber() {
 		return exchangeSrv.countFinishedExchange();
+	}
+	
+	@GetMapping("/cancel/{exchangeID}")
+	@JsonView(JsonViews.Simple.class)
+	public CanceldExchange getCancelByExchangeID(@PathVariable Long exchangeID) {
+		return exchangeSrv.getCancelByExchangeId(exchangeID);
 	}
 	
 //	@GetMapping("/new/givers/{id}")

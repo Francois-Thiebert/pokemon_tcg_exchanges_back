@@ -76,6 +76,9 @@ public class User implements UserDetails {
 	@Column(name = "is_visible", nullable = true)
 	@JsonView(JsonViews.Simple.class)
 	private Boolean isVisible;
+	@Column(name = "connected_since_update", nullable = true)
+	@JsonView(JsonViews.Simple.class)
+	private Boolean connectedSinceUpdate;
 
 	public User() {
 		super();
@@ -83,7 +86,7 @@ public class User implements UserDetails {
 
 	public User(Long id, Role role, String login, String password, String friendCode, Set<Exchange> exchanges1,
 			Set<Exchange> exchanges2, Set<Card> wishList, Set<Card> toGiveList, LocalDateTime lastLogging,
-			Boolean isVisible) {
+			Boolean isVisible, Boolean connectedSinceUpdate) {
 		super();
 		this.id = id;
 		this.role = role;
@@ -96,6 +99,15 @@ public class User implements UserDetails {
 		this.toGiveList = toGiveList;
 		this.lastLogging = lastLogging;
 		this.isVisible = isVisible;
+		this.connectedSinceUpdate = connectedSinceUpdate;
+	}
+
+	public Boolean getConnectedSinceUpdate() {
+		return connectedSinceUpdate;
+	}
+
+	public void setConnectedSinceUpdate(Boolean connectedSinceUpdate) {
+		this.connectedSinceUpdate = connectedSinceUpdate;
 	}
 
 	public LocalDateTime getLastLogging() {

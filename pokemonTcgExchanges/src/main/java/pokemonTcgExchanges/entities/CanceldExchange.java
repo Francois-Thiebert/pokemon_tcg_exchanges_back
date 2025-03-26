@@ -29,7 +29,7 @@ public class CanceldExchange {
 	private Long id;
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "exchange_id") 
-	@JsonView(JsonViews.Simple.class)
+	@JsonView(JsonViews.CanceldExchange.class)
 	private Exchange exchange;
 	@Column(name = "cause")
 	@Enumerated(EnumType.ORDINAL)

@@ -1,12 +1,11 @@
 package pokemonTcgExchanges.repositories;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import pokemonTcgExchanges.entities.CanceldExchange;
+import pokemonTcgExchanges.entities.Exchange;
 
 public interface CanceldExchangeRepository extends JpaRepository<CanceldExchange, Long>  {
 	
@@ -19,6 +18,9 @@ public interface CanceldExchangeRepository extends JpaRepository<CanceldExchange
 		                                         @Param("idUserB") Long idUserB, 
 		                                         @Param("idCardA") Long idCardA, 
 		                                         @Param("idCardB") Long idCardB);
+	
+	@Query("SELECT c FROM CanceldExchange c WHERE c.exchange = :exchange")
+	CanceldExchange findCancelByExchange(@Param("exchange") Exchange exchange);
 
 }
 	
