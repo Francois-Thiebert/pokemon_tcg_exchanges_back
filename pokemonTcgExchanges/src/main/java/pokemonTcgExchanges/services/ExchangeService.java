@@ -3,6 +3,7 @@ package pokemonTcgExchanges.services;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -128,6 +129,10 @@ public class ExchangeService {
 	
 	public Long getCurrentExchangeNumberByUser(User user) {
 		return exchangeRepo.countCurrentExchangeByUser(user.getId());
+	}
+	
+	public Long getExchangeNumberByUser(User user) {
+		return exchangeRepo.countExchangeByUser(user.getId());
 	}
 
 	public Exchange update(Exchange exchange) {
@@ -458,6 +463,37 @@ public class ExchangeService {
 	}
 
 	
+	public void getNewExchangeByRarity(Long userID, Integer rarity) {
+		User asker = userSrv.getById(userID);
+		Long totalActiveUsers = userSrv.countUsers();
+		List<Card> askerWishedCards = new ArrayList();
+		List<Card> askerToGiveCards = new ArrayList();
+		if(!asker.getWishList().isEmpty()) {
+			for (Card c : asker.getWishList()) {
+				if(c.getRarity() == rarity) {
+					askerWishedCards.add(c);
+				}
+			}
+		}else {
+			throw new IllegalStateException("Empty asker wishlist");
+		}
+		if(!asker.getToGiveList().isEmpty()) {
+			for (Card c : asker.getToGiveList()) {
+				if(c.getRarity() == rarity) {
+					askerToGiveCards.add(c);
+				}
+			}
+		}else {
+			throw new IllegalStateException("Empty asker toGiveList");
+		}
+		Random random = new Random();
+		int indexStartAlgo = random.nextInt(totalActiveUsers.intValue()) + 1;
+		System.out.println("le user de départ est le "+indexStartAlgo+"e sur "+totalActiveUsers);
+		
+		
+		
+	}
+	
 	public Boolean isCancelHistory(Long cardAId, Long cardBId, Long userAId, Long userBId) {
 	    CanceldExchange cancelHistory = cancelRepo.findCancelHistory(userAId, userBId, cardAId, cardBId);
 	    if (cancelHistory != null) {
@@ -472,6 +508,12 @@ public class ExchangeService {
 	}
 	public Long countFinishedExchange() {
 		return exchangeRepo.countFinishedExchange();
+	}
+	
+	public void deleteOldExchanges() {
+		LocalDateTime now = LocalDateTime.now();
+		LocalDateTime limitDate = now.minusDays(40);
+		exchangeRepo.deleteOldExchanges(limitDate);
 	}
 
 }
