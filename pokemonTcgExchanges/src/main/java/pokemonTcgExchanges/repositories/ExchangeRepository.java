@@ -1,5 +1,6 @@
 package pokemonTcgExchanges.repositories;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,11 +40,19 @@ public interface ExchangeRepository extends JpaRepository<Exchange, Long> {
 	@Query("SELECT COUNT(e) FROM Exchange e WHERE (e.state = 0 OR e.state = 1) AND (e.user1.id = :idUser OR e.user2.id = :idUser)")
 	Long countCurrentExchangeByUser(@Param("idUser") Long idUser);
 	
+	@Query("SELECT COUNT(e) FROM Exchange e WHERE (e.user1.id = :idUser OR e.user2.id = :idUser)")
+	Long countExchangeByUser(@Param("idUser") Long idUser);
+	
 	@Query("SELECT COUNT(e) FROM Exchange e WHERE e.state = 0 OR e.state = 1")
 	Long countCurrentExchange();
 
 	@Query("SELECT COUNT(e) FROM Exchange e WHERE e.state = 2")
 	Long countFinishedExchange();
+	
+	@Modifying
+	@Transactional
+	@Query("DELETE FROM Exchange e WHERE e.date < :limitDate")
+	void deleteOldExchanges(@Param("limitDate") LocalDateTime limitDate);
 
 	
 	Exchange findByUser1AndUser2(User user1, User user2);

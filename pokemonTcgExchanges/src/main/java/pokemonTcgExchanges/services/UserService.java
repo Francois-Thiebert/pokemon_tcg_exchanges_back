@@ -224,19 +224,27 @@ public class UserService {
 	}
 	
 	public Long countActiveUsers() {
-		return userRepo.countActiveUsers();
+		LocalDateTime now = LocalDateTime.now();
+		LocalDateTime limitDate = now.minusHours(72);
+		return userRepo.countActiveUsers(limitDate);
 	}
 	
 	public Long countBlockedUsers() {
 		return userRepo.countBlockedUsers();
 	}
 	
-//	public Long countWishedCardsByUser(Long userID) {
-//		return userRepo.countWishedCardsByUser(userID);
-//	}
-//	
-//	public int countToGiveCardsByUser(Long userID) {
-//		return userRepo.countToGiveCardsByUser(userID);
-//	}
+	public Long countWishedCardsByUser(Long userID) {
+		return userRepo.countWishedCardsByUser(userID);
+	}
+	
+	public int countToGiveCardsByUser(Long userID) {
+		return userRepo.countToGiveCardsByUser(userID);
+	}
+	
+	public void deleteInactiveUsers() {
+		LocalDateTime now = LocalDateTime.now();
+		LocalDateTime limitDate = now.minusMonths(3);
+		userRepo.deleteInactiveUsers(limitDate);
+	}
 
 }

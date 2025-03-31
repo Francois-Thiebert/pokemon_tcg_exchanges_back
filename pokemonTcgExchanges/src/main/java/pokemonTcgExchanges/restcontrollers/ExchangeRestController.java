@@ -29,6 +29,7 @@ import pokemonTcgExchanges.entities.User;
 import pokemonTcgExchanges.jsonviews.JsonViews;
 import pokemonTcgExchanges.services.CardService;
 import pokemonTcgExchanges.services.ExchangeService;
+import pokemonTcgExchanges.services.UserService;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -39,6 +40,8 @@ public class ExchangeRestController {
 	private ExchangeService exchangeSrv;
 	@Autowired
 	private CardService cardSrv;
+	@Autowired
+	private UserService userSrv;
 
 	@GetMapping("adm/all")
 	@JsonView(JsonViews.Simple.class)
@@ -78,6 +81,10 @@ public class ExchangeRestController {
 		exchanges=exchangeSrv.getNewExchanges(id);
 		return exchanges;
 	}
+	@GetMapping("/newByRarity/{userID}/{rarity}")
+	public void getNewExchangesByRarity(@PathVariable Long userID,@PathVariable Integer rarity) {
+		exchangeSrv.getNewExchangeByRarity(userID, rarity);
+	}
 	
 	@GetMapping("/adm/cancel_history/{idUserA}/{idUserB}/{idCardA}/{idCardB}")
 	@JsonView(JsonViews.Simple.class)
@@ -98,6 +105,17 @@ public class ExchangeRestController {
 	@JsonView(JsonViews.Simple.class)
 	public CanceldExchange getCancelByExchangeID(@PathVariable Long exchangeID) {
 		return exchangeSrv.getCancelByExchangeId(exchangeID);
+	}
+	
+	@GetMapping("/numberCurrentExchangeUser/{id}")
+	public Long countCurrentExchangeByUser(@PathVariable Long id) {
+		User user = userSrv.getById(id);
+		return exchangeSrv.getCurrentExchangeNumberByUser(user);
+	}
+	@GetMapping("/numberExchangeUser/{id}")
+	public Long countExchangeByUser(@PathVariable Long id) {
+		User user = userSrv.getById(id);
+		return exchangeSrv.getExchangeNumberByUser(user);
 	}
 	
 //	@GetMapping("/new/givers/{id}")
@@ -169,6 +187,11 @@ public class ExchangeRestController {
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {
 		exchangeSrv.deleteById(id);
+	}
+	
+	@GetMapping("/adm/deleteOldExchanges")
+	public void deleteOldExchanges() {
+		exchangeSrv.deleteOldExchanges();
 	}
 
 }

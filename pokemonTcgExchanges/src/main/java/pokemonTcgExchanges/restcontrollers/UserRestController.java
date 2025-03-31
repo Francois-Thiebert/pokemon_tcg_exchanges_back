@@ -137,14 +137,14 @@ public class UserRestController {
 		return userSrv.countBlockedUsers();
 	}
 	
-//	@GetMapping("/NumberWishedCards/{userID}")
-//	public Long countWishedCards(@PathVariable Long id) {
-//		return userSrv.countWishedCardsByUser(id);
-//	}
-//	@GetMapping("/NumberToGiveCards/{userID}")
-//	public int countToGiveCards(@PathVariable Long id) {
-//		return userSrv.countToGiveCardsByUser(id);
-//	}
+	@GetMapping("/NumberWishedCards/{id}")
+	public Long countWishedCards(@PathVariable Long id) {
+		return userSrv.countWishedCardsByUser(id);
+	}
+	@GetMapping("/NumberToGiveCards/{id}")
+	public int countToGiveCards(@PathVariable Long id) {
+		return userSrv.countToGiveCardsByUser(id);
+	}
 
 	@PostMapping({ "", "/inscription" })
 	@JsonView(JsonViews.User.class)
@@ -190,6 +190,11 @@ public class UserRestController {
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {
 		userSrv.deleteByUserId(id);
+	}
+	
+	@GetMapping("/adm/deleteInactiveUsers")
+	public void deleteInactiveUsers() {
+		userSrv.deleteInactiveUsers();
 	}
 
 }
