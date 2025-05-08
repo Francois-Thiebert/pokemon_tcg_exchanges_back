@@ -44,6 +44,7 @@ public class CardService {
 		collections.add(1);
 		collections.add(2);
 		collections.add(3);
+		collections.add(4);
 	    return getAllByCollections(collections);
 	}
 
